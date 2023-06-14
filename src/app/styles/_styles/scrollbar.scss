@@ -1,0 +1,9 @@
+.hide-scrollbar {
+  scrollbar-width: none; /* Para navegadores que suportam a propriedade scrollbar-width */
+  scrollbar-color: transparent transparent; /* Para navegadores que suportam a propriedade scrollbar-color */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+  width: 6px; /* Largura da scrollbar */
+}

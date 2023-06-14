@@ -1,0 +1,30 @@
+<div class="wrapper">
+  <div class="accordion">
+    <ng-container *ngFor="let item of accordionElements; let i = index">
+      <div
+      appLookAtMouse
+      [showGradient]="false"
+      [class.active]="i===panelSelected"
+      style="--accordion-color: rgb(43, 215, 66);"
+      (click)="panelSelected = i"
+      class="accordion-panel">
+
+        <h2>
+          <button class="accordion-trigger" (click)="panelSelected = i">
+            <i
+            [class]="item.fontAwesomeIconClass+' accordion-icon'"></i>
+            <span class="accordion-title">{{item.title}}</span>
+          </button>
+        </h2>
+        <div class="accordion-content">
+          <p>{{item.content}}</p>
+
+          <img
+          [src]="item.backgroundImage"
+          class="accordion-image">
+        </div>
+
+      </div>
+    </ng-container>
+  </div>
+</div>
