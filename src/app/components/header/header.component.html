@@ -1,0 +1,29 @@
+<div class="wrapper p-3">
+
+  <div class="blob-wrapper border" appLookAtMouse [showGradient]="false">
+    <svg id="header-blob" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <path 
+      fill="var(--app-primary-color)" 
+      [attr.d]="svgPaths[currentSvgPath]" transform="translate(100 100)"/>
+    </svg>
+  </div>
+
+
+  <h5>{{line1}}</h5>
+  <h1>
+    <ng-container *ngFor="let character of convertStringIntoArray(animatedText1); let i = index">
+      <span
+      style="--index: {{i}}"
+      class="title-character"
+      >{{character}}</span>
+    </ng-container>
+  </h1>
+  <h1>
+    <ng-container *ngFor="let character of convertStringIntoArray(animatedText2); let i = index">
+      <span
+      style="--index: {{i + animatedText1.length / 2}}; "
+      class="title-character"
+      >{{character}}</span>
+    </ng-container>
+  </h1>
+</div>

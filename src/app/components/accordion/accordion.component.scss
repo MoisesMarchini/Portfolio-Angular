@@ -60,9 +60,12 @@ img{
 
     display: grid;
     align-items: center;
+    flex-shrink: 0;
+    transition: color var(--default-transition-time) ease;
 
     &::after{
       content: '';
+      transition: width var(--default-transition-time) ease;
       position: absolute;
       border-radius: 50px;
       left: calc((var(--header-gap) + var(--button-size)) * -1);
@@ -78,9 +81,10 @@ img{
     color: var(--accordion-color);
     font-size: calc(var(--button-size) / 2);
 
+    flex-shrink: 0;
+
     aspect-ratio: 1;
     border-radius: 50%;
-    background-color: var(--header-bg-color);
     display: grid;
     place-content: center;
     z-index: 1;
@@ -114,7 +118,6 @@ img{
   flex-basis: clamp(15rem, 40vh, 20rem);
   flex-grow: 1;
   z-index: 1;
-
   .accordion-content > p{
     transform: translateY(0);
     opacity: 1;
@@ -132,16 +135,29 @@ img{
     height: 30rem;
   }
 
-  .accordion-title::after{
-    display: none;
+  .accordion-panel {
+    .accordion-title{
+      color: transparent;
+      &::after{  
+        width: var(--button-size);
+      }
+    }
+
+    .accordion-content > p{
+      transition: transform var(--default-transition-time) ease-in-out calc(var(--default-transition-time) /2);
+    }
   }
 
-  .accordion-panel .accordion-content > p{
-    transition: transform var(--default-transition-time) ease-in-out calc(var(--default-transition-time) /2);
-  }
-
-  .accordion-panel.active .accordion-content > p{
-    transition: transform var(--default-transition-time) ease-in-out calc(var(--default-transition-time) /2),
-                opacity var(--default-transition-time) ease-in-out calc(var(--default-transition-time) /2);
+  .accordion-panel.active {
+    .accordion-title{
+      color: inherit;
+      &::after{  
+        width: calc(100% + var(--button-size) * 2);
+      }
+    }
+    .accordion-content > p{
+      transition: transform var(--default-transition-time) ease-in-out calc(var(--default-transition-time) /2),
+                  opacity var(--default-transition-time) ease-in-out calc(var(--default-transition-time) /2);
+    }
   }
 }

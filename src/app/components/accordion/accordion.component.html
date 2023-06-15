@@ -5,11 +5,12 @@
       appLookAtMouse
       [showGradient]="false"
       [class.active]="i===panelSelected"
-      style="--accordion-color: rgb(43, 215, 66);"
+      style="--accordion-color: var(--app-primary-color);"
+      (pointerenter)="panelSelected = i"
       (click)="panelSelected = i"
       class="accordion-panel">
 
-        <h2>
+        <h2 class="lh-1">
           <button class="accordion-trigger" (click)="panelSelected = i">
             <i
             [class]="item.fontAwesomeIconClass+' accordion-icon'"></i>
@@ -20,6 +21,7 @@
           <p>{{item.content}}</p>
 
           <img
+          appImgParallax
           [src]="item.backgroundImage"
           class="accordion-image">
         </div>

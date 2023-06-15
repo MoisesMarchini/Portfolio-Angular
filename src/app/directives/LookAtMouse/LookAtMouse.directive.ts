@@ -1,4 +1,5 @@
 import { Directive, ElementRef, HostListener, Renderer2, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { environment } from 'src/app/helpers/environment';
 
 @Directive({
   selector: '[appLookAtMouse]'
@@ -7,6 +8,14 @@ export class LookAtMouseDirective implements OnInit, OnChanges{
   @Input() showGradient = true;
   @Input() enabled = true;
   @Input() maxAngle = 10;
+
+  private get _enabled(){
+    return this.enabled && environment.enabled3d;
+  }
+
+  private get animationDuration() { 
+    return environment.enabled3d? 800 : 0
+  }
 
   private mouseY: number = 0;
           mouseX: number = 0;
@@ -34,7 +43,7 @@ export class LookAtMouseDirective implements OnInit, OnChanges{
     this.mouseX = event.clientX;
     this.mouseY = event.clientY;
 
-    if (!this.enabled || window.innerWidth <= 500){
+    if (!this._enabled || window.innerWidth <= 500){
       this.resetTransform();
       return;
     }
@@ -43,7 +52,7 @@ export class LookAtMouseDirective implements OnInit, OnChanges{
   }
 
   resetTransform() {
-    if (this.enabled && window.innerWidth > 500) {
+    if (this._enabled && window.innerWidth > 500) {
       this.doTransform();
       return;
     }
@@ -58,7 +67,7 @@ export class LookAtMouseDirective implements OnInit, OnChanges{
     }
 
     element.animate(keyframes, {
-      duration: 800,
+      duration: this.animationDuration,
       fill: "forwards"
     });
 
@@ -102,7 +111,7 @@ export class LookAtMouseDirective implements OnInit, OnChanges{
     }
 
     element.animate(keyframes, {
-      duration: 8000,
+      duration: this.animationDuration * 10,
       fill: "forwards"
     });
   }

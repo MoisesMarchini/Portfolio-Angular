@@ -1,8 +1,15 @@
 :root{
-  --app-body-bg: #282828;
-  --app-cursor-bg: #00ff6e40;
-
-
+  --app-body-bg: #343541;
+  --app-body-color: white;
+  --app-primary-color: #00f064;
 
   --bs-body-bg: var(--app-body-bg);
+  
+  --track-bg: #4a4b57;
+  --thumb-bg: var(--app-primary-color);
+}
+
+body {
+  background-color: var(--app-body-bg);
+  color: var(--app-body-color)
 }
