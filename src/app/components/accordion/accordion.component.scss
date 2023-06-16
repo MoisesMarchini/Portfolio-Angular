@@ -5,8 +5,6 @@ img{
 
 .wrapper{
   margin-inline: auto;
-  padding: 1rem;
-  overflow: hidden;
 }
 
 .accordion{
@@ -16,6 +14,7 @@ img{
   --header-gap: 1rem;
   --header-bg-color: rgba(0, 0, 0, 0.5);
   --default-transition-time: .5s;
+  min-height: 100%;
 
   display: flex;
   flex-direction: column;
@@ -30,6 +29,7 @@ img{
   --accordion-color: blue;
 
   position: relative;
+  flex-shrink: 0;
   flex-basis: calc(var(--panel-padding) * 2 + var(--button-size));
   overflow: hidden;
   transition: flex-basis var(--default-transition-time) ease-in-out, flex-grow var(--default-transition-time) ease-in-out;
@@ -106,6 +106,7 @@ img{
     width: 100%;
     height: 100%;
     z-index: -1;
+    filter: brightness(1) grayscale(1);
   }
 }
 
@@ -124,15 +125,28 @@ img{
   }
   .accordion-image{
     transition: filter var(--default-transition-time), scale 60s ease;
-    filter: brightness(.5);
+    filter: brightness(.5) grayscale(0);
     scale: 2;
   }
 }
 
+@media (max-width: 45em){
+  .accordion{
+    width: 100% !important;
+  }
+}
+
 @media (min-width: 45em) {
+  .wrapper{
+    overflow-y: hidden;
+  }
+
   .accordion {
     flex-direction: row;
-    height: 30rem;
+    scroll-padding: 0 25vw;
+    scroll-snap-type: x mandatory;
+    scroll-snap-align: center;
+    height: 100%;
   }
 
   .accordion-panel {
@@ -149,6 +163,7 @@ img{
   }
 
   .accordion-panel.active {
+  flex-basis: calc(80vw - (var(--panel-padding) * 2 + var(--button-size)) * 2);
     .accordion-title{
       color: inherit;
       &::after{  

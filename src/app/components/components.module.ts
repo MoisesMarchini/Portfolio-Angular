@@ -4,6 +4,8 @@ import { CursorComponent } from './cursor/cursor.component';
 import { DirectivesModule } from '../directives/directives.module';
 import { AccordionComponent } from './accordion/accordion.component';
 import { HeaderComponent } from './header/header.component';
+import { BackgroundBlobComponent } from './background-blob/background-blob.component';
+import { GridCardsComponent } from './grid-cards/grid-cards.component';
 
 
 
@@ -11,16 +13,20 @@ import { HeaderComponent } from './header/header.component';
   declarations: [
     CursorComponent,
     AccordionComponent,
-    HeaderComponent
+    HeaderComponent,
+    BackgroundBlobComponent,
+    GridCardsComponent,
   ],
   exports: [
     CursorComponent,
     AccordionComponent,
-    HeaderComponent
+    HeaderComponent,
+    BackgroundBlobComponent,
+    GridCardsComponent,
   ],
   imports: [
     CommonModule,
-    DirectivesModule
+    DirectivesModule,
   ]
 })
 export class ComponentsModule { }

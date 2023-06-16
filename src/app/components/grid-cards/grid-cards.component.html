@@ -1,0 +1,19 @@
+<div 
+
+class="wrapper">
+  <h2 style="margin-bottom: calc(var(--default-padding) * 0.5)">{{title}}</h2>
+
+<div class="cards-container">
+  <ng-container *ngFor="let item of getArray(4)">
+    <div 
+    class="card p-3 m-0 position-relative bg-transparent overflow-hidden">
+      <img 
+      style="z-index: -1; object-fit: cover;"
+      class="card-image-bg position-absolute top-0 start-0 w-100 h-100" src="/assets/images/background (1).jpg">
+      <h3 class="text-uppercase">Card Title</h3>
+      <!-- <div class="card-content"></div> -->
+    </div>
+  </ng-container>
+</div>
+
+</div>

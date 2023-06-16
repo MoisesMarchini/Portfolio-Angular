@@ -1,4 +1,57 @@
-section {
-  height: 100vh;
-  height: 100svh;
+.app-wrapper {
+  --default-margin: 10vmin;
+  --default-padding: 1.5rem;
+  --prev-section-transform: translateY(-100px);
+  --next-section-transform: translateY(100px);
+  --active-section-transform: translateY(0);
+  --section-animation-delay: .2s;
+  --section-inactive-animation-transition: 
+    transform calc(var(--section-animation-delay) *4);
+  --section-active-animation-transition: 
+    transform calc(var(--section-animation-delay) *4) var(--section-animation-delay);
+}
+
+section{
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: all .5s, opacity calc(var(--section-animation-delay) *2) calc(var(--section-animation-delay) * .5);
+
+  height: calc(100vh - var(--default-margin));
+  height: calc(100svh - var(--default-margin));
+  width: calc(100vw - var(--default-margin));
+  width: calc(100svw - var(--default-margin));
+  margin: calc(var(--default-margin) * .5);
+  overflow: hidden;
+
+  :first-child{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+
+    transition: var(--section-inactive-animation-transition);
+  }
+}
+
+section .prev{
+  transform: var(--prev-section-transform);
+}
+
+section .next{
+  transform: var(--next-section-transform);
+}
+
+section.active{
+  opacity: 1;
+  pointer-events: all;
+  :first-child{
+    transform: var(--active-section-transform);
+    transition: var(--section-active-animation-transition);
+  }
 }

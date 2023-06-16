@@ -1,0 +1,31 @@
+.cards-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(clamp(10rem, 300px, 100%), 1fr));
+  grid-gap: 1rem;
+  min-height: calc(100% - var(--default-padding));
+}
+
+.card{
+  min-height: 200px;
+  border: 2px solid var(--app-body-color);
+  border-radius: 4px;
+  display: grid;
+  place-items: center;
+  transition: .5s ease;
+
+  .card-image-bg{
+    transition: .5s ease;
+    filter: brightness(0.5) grayscale(0.75);
+  }
+}
+
+.card:hover{
+  border-radius: 0;
+  border: 2px solid var(--app-primary-color);
+  transform: scale(1.05);
+  
+
+  .card-image-bg{
+    filter: brightness(1) grayscale(0);
+  }
+}

@@ -1,11 +1,24 @@
 <!-- <app-cursor></app-cursor> -->
-
-<div class="container mb-3">
-  <section>
-    <app-header></app-header>
-  </section>
-
-  <section>
-    <app-accordion></app-accordion>
-  </section>
+<div 
+style="z-index: 1000;"
+class="position-absolute top-0 start-0">
+<button class="btn btn-primary" (click)="increaseSection(-1)">left</button>
+<button class="btn btn-primary" (click)="increaseSection(+1)">right</button>
+<input type="text" (change)="onChangeInput($event)">
+</div>
+<div 
+style="--default-margin: {{boxMargin}}; --default-padding: {{boxPadding}}"
+class="app-wrapper">
+  <app-background-blob></app-background-blob>
+  <ng-container *ngFor="let selector of componentSelectors; let i = index">
+    <section 
+    [class.active]="currentSection === i">
+      <div 
+      [class.prev]="currentSection > i"  
+      [class.next]="currentSection < i"
+      class="section-animation">
+        <ng-container *ngComponentOutlet="selector"></ng-container>
+      </div>
+    </section>
+  </ng-container>
 </div>
