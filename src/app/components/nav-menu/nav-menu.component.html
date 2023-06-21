@@ -1,0 +1,37 @@
+<button [class.active]="isOpen" class="btn btn-nav" (click)="isOpen = !isOpen">
+  <i class="fa-solid fa-bars open btn-icon"></i>
+  <i class="fa-solid fa-xmark close btn-icon"></i>
+</button>
+
+<button [class.nav-open]="isOpen" class="btn btn-dark-mode" (click)="changeDarkMode()">
+  <i class="fa-solid fa-moon btn-icon" [class.inactive]="darkMode" ></i>
+  <i class="fa-solid fa-sun btn-icon" [class.inactive]="!darkMode" ></i>
+</button>
+
+
+<div style="--total-menus: {{sectionsCount.length}};" class="w-100 h-100 nav-container" [class.active]="isOpen" (click)="isOpen = false">
+  <!-- <button style="--index: 0" class="btn-circle" (click)="increasePage(-1)" ></button> -->
+  <div class="d-flex flex-column nav-buttons">
+    <ng-container *ngFor="let item of sectionsCount; let i = index">
+
+      <button class="nav-button" [class.active]="isCurrentSection(i)" (click)="setCurrentSection(i)">
+        {{getCurrentSectionTitle(i)}}
+      </button>
+
+      <!-- <button style="--index: {{i}}" [class.active]="isCurrentSection(i)" class="btn-circle" (click)="setCurrentSection(i)" >
+        <i class="fa-solid fa-briefcase"></i>
+        <span>{{getCurrentSectionTitle(i)}}</span>
+      </button> -->
+
+    </ng-container>
+  </div>
+  <!-- <button style="--index: 1" [class.active]="isCurrentSection(1)" class="btn-circle" (click)="setCurrentSection(1)" >
+    <i class="fa-solid fa-briefcase"></i>
+    <span>Projetos</span>
+  </button>
+  <button style="--index: 2" [class.active]="isCurrentSection(1)" class="btn-circle" (click)="increasePage(1)" ></button>
+  <button style="--index: 3" [class.active]="isCurrentSection(0)" class="btn-circle" (click)="setCurrentSection(0)" >
+    <i class="fa-solid fa-house"></i>
+    <span>Início</span>
+  </button> -->
+</div>

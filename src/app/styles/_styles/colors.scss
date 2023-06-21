@@ -1,12 +1,17 @@
-:root{
-  --app-body-bg: #343541;
-  --app-body-color: white;
-  --app-primary-color: #00f064;
+body{
+  --app-body-bg: #f2f2f2;
+  --app-body-color: #0d0d0d;
+
+  --app-primary-color: rgb(251, 178, 42);
 
   --bs-body-bg: var(--app-body-bg);
-  
-  --track-bg: #4a4b57;
-  --thumb-bg: var(--app-primary-color);
+
+  --track-bg: var(--app-body-bg); //#4a4b57;
+  --thumb-bg: var(--app-body-color); // var(--app-primary-color);
+  &.dark-mode{
+    --app-body-bg: #0d0d0d;
+    --app-body-color: #f2f2f2;
+  }
 }
 
 body {

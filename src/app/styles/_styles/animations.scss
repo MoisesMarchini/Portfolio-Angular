@@ -1,0 +1,11 @@
+:root {
+  --default-anim-duration: .5s;
+}
+
+body{
+  transition: all var(--default-anim-duration), color 0s;
+}
+
+*{
+  transition: inherit;
+}

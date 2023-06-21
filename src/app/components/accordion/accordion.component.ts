@@ -25,13 +25,13 @@ export class AccordionComponent implements AfterViewInit {
       {
         title: 'Accordion 1',
         fontAwesomeIconClass: "fa-brands fa-battle-net",
-        backgroundImage: 'assets/images/background (1).jpg',
+        backgroundImage: 'assets/images/projects/netmovies-cover.png',
         content: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores, nulla reprehenderit doloremque, velit commodi quos minus porro sit quisquam fugiat earum aut possimus quidem corporis ea nostrum ullam amet incidunt?'
       },
       {
         title: 'Accordion 1',
         fontAwesomeIconClass: "fa-brands fa-battle-net",
-        backgroundImage: 'assets/images/background (2).jpg',
+        backgroundImage: 'assets/images/projects/tvpipoca-cover.png',
         content: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores, nulla reprehenderit doloremque, velit commodi quos minus porro sit quisquam fugiat earum aut possimus quidem corporis ea nostrum ullam amet incidunt?'
       },
       {
@@ -67,7 +67,7 @@ export class AccordionComponent implements AfterViewInit {
   onWindowResize() {
     this.updateAccordionWidth();
   }
-  
+
   onClickPanel(panelId: string, index: number){
     const panel = document.getElementById(panelId);
     if(!panel)

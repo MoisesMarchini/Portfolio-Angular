@@ -5,16 +5,21 @@ import { Component, OnInit, Input } from '@angular/core';
   templateUrl: './grid-cards.component.html',
   styleUrls: ['./grid-cards.component.scss']
 })
-export class GridCardsComponent implements OnInit {
+export class GridCardsComponent {
   @Input() title: string = 'Projetos';
-  
+  @Input() projects: ProjectCard[] = [];
+
   getArray(length: number): number[] {
     return Array(length).fill(0);
   }
+}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+export interface ProjectCard{
+  title: string,
+  tags: { title: string, fontAwesomeIcon: string, }[],
+  links: {
+    demo: string,
+    github: string,
+  },
+  background: string,
 }

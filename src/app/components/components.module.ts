@@ -3,9 +3,9 @@ import { CommonModule } from '@angular/common';
 import { CursorComponent } from './cursor/cursor.component';
 import { DirectivesModule } from '../directives/directives.module';
 import { AccordionComponent } from './accordion/accordion.component';
-import { HeaderComponent } from './header/header.component';
 import { BackgroundBlobComponent } from './background-blob/background-blob.component';
 import { GridCardsComponent } from './grid-cards/grid-cards.component';
+import { NavMenuComponent } from './nav-menu/nav-menu.component';
 
 
 
@@ -13,16 +13,16 @@ import { GridCardsComponent } from './grid-cards/grid-cards.component';
   declarations: [
     CursorComponent,
     AccordionComponent,
-    HeaderComponent,
     BackgroundBlobComponent,
     GridCardsComponent,
+    NavMenuComponent,
   ],
   exports: [
     CursorComponent,
     AccordionComponent,
-    HeaderComponent,
     BackgroundBlobComponent,
     GridCardsComponent,
+    NavMenuComponent,
   ],
   imports: [
     CommonModule,

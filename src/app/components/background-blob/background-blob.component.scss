@@ -14,7 +14,7 @@
   display: grid;
   place-items: center;
   overflow: hidden;
-  outline: 5px solid white;
+  outline: 5px solid var(--app-body-color);
   transition: var(--default-anim-duration);
   .blob-svg{
     width: 100%;

@@ -14,11 +14,13 @@ img{
   --header-gap: 1rem;
   --header-bg-color: rgba(0, 0, 0, 0.5);
   --default-transition-time: .5s;
+  --border-radius: 0;
+
   min-height: 100%;
 
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: .2rem;
   color: var(--text-color);
   * {
     margin: 0;
@@ -34,11 +36,14 @@ img{
   overflow: hidden;
   transition: flex-basis var(--default-transition-time) ease-in-out, flex-grow var(--default-transition-time) ease-in-out;
   padding: var(--panel-padding);
-  padding-right: calc(var(--panel-padding) * 4);
 
-  border-radius: calc((var(--panel-padding) * 2 + var(--button-size))/2);
+  border-radius: var(--border-radius);
 
   isolation: isolate;
+
+  h2{
+    background-color: var(--header-bg-color);
+  }
 
   .accordion-trigger{
     background-color: transparent;
@@ -62,18 +67,6 @@ img{
     align-items: center;
     flex-shrink: 0;
     transition: color var(--default-transition-time) ease;
-
-    &::after{
-      content: '';
-      transition: width var(--default-transition-time) ease;
-      position: absolute;
-      border-radius: 50px;
-      left: calc((var(--header-gap) + var(--button-size)) * -1);
-      width: calc(100% + var(--button-size) * 2);
-      height: var(--button-size);
-      background-color: var(--header-bg-color);
-      z-index: -1;
-    }
   }
 
   .accordion-icon{
@@ -84,13 +77,15 @@ img{
     flex-shrink: 0;
 
     aspect-ratio: 1;
-    border-radius: 50%;
+    border-radius: var(--border-radius);
     display: grid;
     place-content: center;
     z-index: 1;
   }
 
   .accordion-content > p{
+    margin-top: 1rem;
+    line-height: 1.2;
     transform: translateY(2rem);
     opacity: 0;
     transition: var(--default-transition-time) ease-in-out calc(var(--default-transition-time) /2);
@@ -152,9 +147,6 @@ img{
   .accordion-panel {
     .accordion-title{
       color: transparent;
-      &::after{  
-        width: var(--button-size);
-      }
     }
 
     .accordion-content > p{
@@ -166,9 +158,6 @@ img{
   flex-basis: calc(80vw - (var(--panel-padding) * 2 + var(--button-size)) * 2);
     .accordion-title{
       color: inherit;
-      &::after{  
-        width: calc(100% + var(--button-size) * 2);
-      }
     }
     .accordion-content > p{
       transition: transform var(--default-transition-time) ease-in-out calc(var(--default-transition-time) /2),

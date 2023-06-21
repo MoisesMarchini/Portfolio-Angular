@@ -1,6 +1,6 @@
 .cards-container{
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(clamp(10rem, 300px, 100%), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(clamp(10rem, 300px, 100%), 1fr));
   grid-gap: 1rem;
   min-height: calc(100% - var(--default-padding));
 }
@@ -9,13 +9,45 @@
   min-height: 200px;
   border: 2px solid var(--app-body-color);
   border-radius: 4px;
-  display: grid;
-  place-items: center;
-  transition: .5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: var(--default-anim-duration) ease;
 
   .card-image-bg{
-    transition: .5s ease;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    object-fit: cover;
+    transition: var(--default-anim-duration) ease;
     filter: brightness(0.5) grayscale(0.75);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: bgAnimated 12s infinite alternate ease-in-out;
+    animation-play-state: paused;
+  }
+
+  .card-content{
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    .card-tags{
+      font-size: 1.5rem;
+      color: var(--app-primary-color);
+      opacity: .5;
+    }
+    .btn{
+      font-size: .8rem;
+      transition: var(--default-anim-duration) ease;
+      opacity: 0;
+      transform: translateY(100px);
+      border: 0;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
   }
 }
 
@@ -23,9 +55,33 @@
   border-radius: 0;
   border: 2px solid var(--app-primary-color);
   transform: scale(1.05);
-  
+  z-index: 1;
+
 
   .card-image-bg{
     filter: brightness(1) grayscale(0);
+    animation-play-state: running;
+  }
+
+  .card-content{
+    background-color: transparent;
+    .card-title, .card-tags{
+      pointer-events: none;
+      opacity: 0;
+      transform: translateY(-100px);
+    }
+    .btn{
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+}
+
+@keyframes bgAnimated {
+  from{
+    object-position: 0% 0%;
+  }
+  to{
+    object-position: 100% 100%;
   }
 }

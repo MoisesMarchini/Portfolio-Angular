@@ -1,0 +1,69 @@
+.wrapper {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+h1 {
+  --bump: 0;
+
+
+  font-size: calc(10vw + 1rem);
+  font-weight: 700;
+  position: relative;
+  display: flex;
+}
+
+h1 span {
+  --anim-duration: .2s;
+  --aditional-index: 0;
+  --aditional-delay: 0s;
+  opacity: 0;
+  // transform: translateX(50px);
+  cursor: default;
+
+  transition: var(--anim-duration) cubic-bezier(0.175, 0.885, 0.32, 1.775);
+
+
+  animation: LetterAnim
+      var(--anim-duration) // Duration
+      calc((var(--index) + var(--aditional-index) + 1) * (var(--anim-duration) / 2) + var(--aditional-delay)) // Delay
+      forwards cubic-bezier(0.175, 0.885, 0.32, 2.775);
+}
+
+a.social-link{
+  width: 3rem;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  transition: all .3s ease-in-out;
+  background-color: var(--app-primary-color);
+  color: white;
+  outline: 2px solid transparent;
+  &:hover{
+    width: 3rem;
+    background-color: transparent;
+    outline: 2px solid;
+    color: var(--app-primary-color);
+  }
+  i {
+    transition: none;
+  }
+}
+
+@keyframes LetterAnim {
+  from {
+    opacity: 0;
+    // scale: 1.25;
+    // transform: translateX(50px);
+  }
+  to{
+    opacity: 1;
+    // scale: 1;
+    // transform: translateX(0px);
+  }
+}

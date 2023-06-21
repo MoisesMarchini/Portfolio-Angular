@@ -1,0 +1,32 @@
+<div class="wrapper">
+
+
+  <div class="header-container d-flex flex-column">
+    <h3 class="h2">{{line1}}</h3>
+    <h1>
+      <ng-container *ngFor="let character of convertStringIntoArray(animatedText1); let i = index">
+        <span
+        style="--index: {{i}}"
+        class="title-character"
+        >{{character}}</span>
+      </ng-container>
+    </h1>
+    <h1>
+      <ng-container *ngFor="let character of convertStringIntoArray(animatedText2); let i = index">
+        <span
+        style="--index: {{i + animatedText1.length / 2}}; "
+        class="title-character"
+        >{{character}}</span>
+      </ng-container>
+    </h1>
+    <p class="align-self-end h2 d-flex gap-2 mt-2">
+      <a href="" class="social-link">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a href="" class="social-link">
+        <i class="fa-brands fa-linkedin-in"></i>
+      </a>
+    </p>
+  </div>
+
+</div>
