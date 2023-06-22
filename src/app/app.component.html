@@ -1,13 +1,13 @@
 <div
-style="--default-margin: {{boxMargin}}; --default-padding: {{boxPadding}}"
+style="--default-margin: {{boxMargin()}}; --default-padding: {{boxPadding()}}"
 class="app-wrapper">
   <app-nav-menu></app-nav-menu>
   <ng-container *ngFor="let selector of componentSelectors; let i = index">
     <section
-    [class.active]="currentSection === i">
+    [class.active]="currentSection() === i">
       <div
-      [class.prev]="currentSection > i"
-      [class.next]="currentSection < i"
+      [class.prev]="currentSection() > i"
+      [class.next]="currentSection() < i"
       class="section-animation">
         <ng-container *ngComponentOutlet="selector"></ng-container>
       </div>

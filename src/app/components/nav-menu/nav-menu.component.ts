@@ -10,11 +10,11 @@ export class NavMenuComponent implements OnInit {
 
   isOpen = false;
 
-  get darkMode() {
+  darkMode() {
     return environment.darkMode;
   }
 
-  get sectionsCount() {
+  sectionsCount() {
     return environment.componentSelectors;
   }
 

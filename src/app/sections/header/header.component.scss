@@ -22,10 +22,9 @@ h1 span {
   --aditional-index: 0;
   --aditional-delay: 0s;
   opacity: 0;
-  // transform: translateX(50px);
   cursor: default;
 
-  transition: var(--anim-duration) cubic-bezier(0.175, 0.885, 0.32, 1.775);
+  // transition: opacity var(--anim-duration) cubic-bezier(0.175, 0.885, 0.32, 1.775);
 
 
   animation: LetterAnim
@@ -58,12 +57,8 @@ a.social-link{
 @keyframes LetterAnim {
   from {
     opacity: 0;
-    // scale: 1.25;
-    // transform: translateX(50px);
   }
   to{
     opacity: 1;
-    // scale: 1;
-    // transform: translateX(0px);
   }
 }

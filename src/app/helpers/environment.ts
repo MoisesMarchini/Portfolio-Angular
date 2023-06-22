@@ -10,7 +10,6 @@ export const environment = {
 
   componentSelectors: [
     HeaderComponent,
-    // AccordionComponent,
     ProjectsComponent,
     SkillsComponent,
   ],
@@ -33,8 +32,8 @@ export const environment = {
     '20vmin',
   ],
   boxPadding: [
-    '2rem',
+    '64px',
     '128px',
-    '1rem',
+    '128px',
 ],
 }

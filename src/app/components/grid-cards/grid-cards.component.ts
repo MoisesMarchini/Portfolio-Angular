@@ -7,7 +7,9 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class GridCardsComponent {
   @Input() title: string = 'Projetos';
-  @Input() projects: ProjectCard[] = [];
+  @Input() projects?: ProjectCard[];
+  @Input() skills?: SkillCard[];
+  @Input() idealWidth: string = '200px';
 
   getArray(length: number): number[] {
     return Array(length).fill(0);
@@ -22,4 +24,10 @@ export interface ProjectCard{
     github: string,
   },
   background: string,
+}
+
+export interface SkillCard{
+  title: string,
+  fontAwesomeIcon?: string,
+  urlIcon?: string,
 }

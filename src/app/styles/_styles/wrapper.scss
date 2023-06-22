@@ -4,7 +4,6 @@
   overflow: auto;
   overflow-y: scroll;
   height: 100%;
-  transition: all var(--default-anim-duration);
   > h2{
     text-transform: uppercase;
     transition: none;

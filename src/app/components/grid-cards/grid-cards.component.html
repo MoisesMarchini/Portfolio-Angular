@@ -1,12 +1,12 @@
 <div
-
+style="--card-ideal-width: {{idealWidth}};"
 class="wrapper">
   <h2 style="margin: calc(var(--default-padding) * 0.25) 0">{{title}}</h2>
 
 <div class="cards-container">
   <ng-container *ngFor="let item of projects">
     <div
-    class="card m-0 position-relative bg-transparent overflow-hidden">
+    class="card card-project m-0 position-relative bg-transparent overflow-hidden">
       <img
       class="card-image-bg" [src]="item.background">
       <div class="card-content p-3 d-flex gap-2 flex-column">
@@ -20,6 +20,15 @@ class="wrapper">
           <a class="btn btn-primary shadow-sm" target="_blank" [href]="item.links.demo">Demo</a>
           <a class="btn btn-primary shadow-sm" target="_blank" [href]="item.links.github">Github</a>
         </div>
+      </div>
+    </div>
+  </ng-container>
+  <ng-container *ngFor="let item of skills">
+    <div
+    class="card card-skill m-0 position-relative overflow-hidden">
+      <div class="card-content p-3 gap-2">
+        <i [class]="item.fontAwesomeIcon" ></i>
+        <p class="card-title text-uppercase m-0">{{item.title}}</p>
       </div>
     </div>
   </ng-container>
