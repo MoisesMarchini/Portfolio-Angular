@@ -1,0 +1,28 @@
+.card-contact{
+  background-color: var(--app-body-bg);
+  color: var(--app-body-color);
+  border: 2px solid var(--app-body-color);
+  text-decoration: none;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.card-contact::after{
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  background-color: var(--app-body-color);
+  color: var(--app-body-bg);
+  transition: width var(--default-anim-duration);
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+.card-contact:hover::after{
+  width: 100%;
+}
