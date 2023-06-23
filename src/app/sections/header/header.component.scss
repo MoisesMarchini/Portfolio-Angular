@@ -7,6 +7,14 @@
   position: relative;
 }
 
+.animated-text-container:hover h1 span{
+  opacity: 0;
+  animation: opacity0To1
+      var(--anim-duration) // Duration
+      calc((var(--index) + var(--aditional-index) + 1) * (var(--anim-duration) / 2) + var(--aditional-delay)) // Delay
+      forwards cubic-bezier(0.175, 0.885, 0.32, 2.775);
+}
+
 h1 {
   --bump: 0;
 
@@ -18,19 +26,17 @@ h1 {
 }
 
 h1 span {
-  --anim-duration: .2s;
+  --anim-duration: .1s;
   --aditional-index: 0;
   --aditional-delay: 0s;
-  opacity: 0;
   cursor: default;
-
-  // transition: opacity var(--anim-duration) cubic-bezier(0.175, 0.885, 0.32, 1.775);
-
-
-  animation: LetterAnim
+  opacity: 0;
+  animation: opacity0To1
       var(--anim-duration) // Duration
       calc((var(--index) + var(--aditional-index) + 1) * (var(--anim-duration) / 2) + var(--aditional-delay)) // Delay
       forwards cubic-bezier(0.175, 0.885, 0.32, 2.775);
+  animation-direction: normal;
+
 }
 
 a.social-link{
@@ -40,25 +46,15 @@ a.social-link{
   place-items: center;
   text-decoration: none;
   transition: all .3s ease-in-out;
-  background-color: var(--app-primary-color);
-  color: white;
-  outline: 2px solid transparent;
+  background-color: transparent;
+  outline: 2px solid var(--app-primary-color);
+  color: var(--app-primary-color);
   &:hover{
     width: 3rem;
-    background-color: transparent;
-    outline: 2px solid;
-    color: var(--app-primary-color);
+    background-color: var(--app-primary-color);
+    color: white;
   }
   i {
     transition: none;
-  }
-}
-
-@keyframes LetterAnim {
-  from {
-    opacity: 0;
-  }
-  to{
-    opacity: 1;
   }
 }

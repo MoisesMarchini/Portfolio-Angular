@@ -16,6 +16,9 @@
 
       <button class="nav-button" [class.active]="isCurrentSection(i)" (click)="setCurrentSection(i)">
         {{getCurrentSectionTitle(i)}}
+        <div class="text-filled">
+          {{getCurrentSectionTitle(i)}}
+        </div>
       </button>
 
     </ng-container>

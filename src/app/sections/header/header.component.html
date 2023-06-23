@@ -3,22 +3,26 @@
 
   <div class="header-container d-flex flex-column">
     <h3 class="h2">{{line1}}</h3>
-    <h1>
-      <ng-container *ngFor="let character of convertStringIntoArray(animatedText1); let i = index">
-        <span
-        style="--index: {{i}}"
-        class="title-character"
-        >{{character}}</span>
-      </ng-container>
-    </h1>
-    <h1>
-      <ng-container *ngFor="let character of convertStringIntoArray(animatedText2); let i = index">
-        <span
-        style="--index: {{i + animatedText1.length / 2}}; "
-        class="title-character"
-        >{{character}}</span>
-      </ng-container>
-    </h1>
+    <div
+    id="animated-text-container"
+    class="animated-text-container" (pointerenter)="AnimatedTextMouseEnter($event)" >
+      <h1>
+        <ng-container *ngFor="let character of convertStringIntoArray(animatedText1); let i = index">
+          <span
+          style="--index: {{i}};"
+          class="title-character"
+          >{{character}}</span>
+        </ng-container>
+      </h1>
+      <h1>
+        <ng-container *ngFor="let character of convertStringIntoArray(animatedText2); let i = index">
+          <span
+          style="--index: {{i + animatedText1.length}}; "
+          class="title-character"
+          >{{character}}</span>
+        </ng-container>
+      </h1>
+    </div>
     <p class="align-self-end h2 d-flex gap-2 mt-2">
       <a href="" class="social-link">
         <i class="fa-brands fa-github"></i>

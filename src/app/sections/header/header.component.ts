@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 
+const TEXT1 = 'FRONT-END';
+const TEXT2 = 'DEVELOPER';
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -8,19 +11,17 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
 
   line1 = 'Moisés Marchini'
-  animatedText1 = "FRONT-END"
-  animatedText2 = 'DEVELOPER'
+  animatedText1 = TEXT1
+  animatedText2 = TEXT2
 
   constructor() { }
 
   convertStringIntoArray(baseString: string) {
-    const result: string[] = [];
+    return baseString.split('');
+  }
 
-    for (let index = 0; index < baseString.length; index++) {
-      result.push(baseString[index]);
-    }
+  AnimatedTextMouseEnter(event: any) {
 
-    return result;
   }
 
 }
