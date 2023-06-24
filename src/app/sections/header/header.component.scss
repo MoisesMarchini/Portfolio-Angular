@@ -47,7 +47,7 @@ a.social-link{
   text-decoration: none;
   transition: all .3s ease-in-out;
   background-color: transparent;
-  outline: 2px solid var(--app-primary-color);
+  border: 2px solid var(--app-primary-color);
   color: var(--app-primary-color);
   &:hover{
     width: 3rem;

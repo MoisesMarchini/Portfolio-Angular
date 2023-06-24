@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/app/helpers/environment';
 
 @Component({
   selector: 'app-contact',
@@ -10,17 +11,17 @@ export class ContactComponent implements OnInit {
   contactLinks: {title: string, link: string, fontawesomeIcon?: string}[] = [
     {
       title: 'Whatsapp',
-      link: '#',
+      link: environment.socialMediaLinks.phone,
       fontawesomeIcon: 'fa-solid fa-arrow-up-right-from-square'
     },
     {
       title: 'E-mail',
-      link: '#',
+      link: environment.socialMediaLinks.email,
       fontawesomeIcon: 'fa-solid fa-arrow-up-right-from-square'
     },
     {
       title: 'Linkedin',
-      link: '#',
+      link: environment.socialMediaLinks.linkedin,
       fontawesomeIcon: 'fa-solid fa-arrow-up-right-from-square'
     },
   ]

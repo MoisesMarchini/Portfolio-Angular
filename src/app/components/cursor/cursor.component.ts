@@ -14,10 +14,12 @@ export class CursorComponent {
   @HostListener('document:mousemove', ['$event'])
   onMouseMove(e: MouseEvent) {
     const cursorElement = this.cursor.nativeElement;
-    const isButton = e.target instanceof HTMLButtonElement;
     const isPointerCursor = window.getComputedStyle(e.target as Element).cursor === 'pointer';
     const buttonElement = e.target as HTMLElement;
-    const excludedClass = buttonElement.classList.contains('nav-button');
+    const buttonClassList = buttonElement.classList;
+    const excludedClass = buttonClassList.contains('nav-button');
+    const btnNoMarginClass = buttonClassList.contains('cursor-m-0') || buttonClassList.contains('cursor-0');
+    const btnNoOpacityClass = buttonClassList.contains('cursor-opa-0') || buttonClassList.contains('cursor-0');
 
     CursorHelper.x = e.clientY;
     CursorHelper.y = e.clientY;
@@ -29,18 +31,23 @@ export class CursorComponent {
       transform: `translate(${x}px, ${y}px)`
     }
 
-    if (isButton || isPointerCursor) {
-      if(!excludedClass){
-        this.buttonRect = buttonElement.getBoundingClientRect();
-        cursorElement.style.width = `${this.buttonRect.width}px`;
-        cursorElement.style.height = `${this.buttonRect.height}px`;
-        keyframes.transform = `translate(${this.buttonRect.x}px, ${this.buttonRect.y}px)`;
-        cursorElement.classList.add('rounded-0');
-      }
+    if (isPointerCursor && !excludedClass) {
+      this.buttonRect = buttonElement.getBoundingClientRect();
+      cursorElement.style.width = `${this.buttonRect.width}px`;
+      cursorElement.style.height = `${this.buttonRect.height}px`;
+      keyframes.transform = `translate(${this.buttonRect.x}px, ${this.buttonRect.y}px)`;
+      cursorElement.classList.add('rounded-0');
+      if(btnNoMarginClass)
+        cursorElement.classList.add('m-0');
+
+      if(btnNoOpacityClass)
+        cursorElement.classList.add('opacity-0');
     } else {
       cursorElement.style.width = this.defaultCursorSize;
       cursorElement.style.height = this.defaultCursorSize;
       cursorElement.classList.remove('rounded-0');
+      cursorElement.classList.remove('m-0');
+      cursorElement.classList.remove('opacity-0');
     }
 
     cursorElement.animate(keyframes, {

@@ -3,7 +3,7 @@
   --btn-top: 0%;
   --btn-left: 0%;
   --btn-transform: 0%, 0%;
-  transition: inherit;
+  transition: all var(--default-anim-duration) ease, font-size 0ms linear, color 0ms linear;
   color: var(--app-body-color);
   z-index: 100;
   width: 4rem;
@@ -26,6 +26,7 @@
 .btn-nav{
   left: calc(var(--btn-margin) + var(--btn-left) - 1px);
   border-bottom-right-radius: 50%;
+
   .close{
     transform: rotate(45deg);
     opacity: 0;
@@ -35,9 +36,8 @@
 .btn-dark-mode{
   right: calc(var(--btn-margin) + var(--btn-left) - 1px);
   border-bottom-left-radius: 50%;
-
   .btn-icon{
-    transition: all .8s;
+    transition: inherit;
   }
   .inactive{
     opacity: 0;

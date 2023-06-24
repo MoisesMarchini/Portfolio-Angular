@@ -1,6 +1,5 @@
 import { HeaderComponent } from '../sections/header/header.component';
 import { ProjectsComponent } from '../sections/projects/projects.component';
-import { SkillsComponent } from '../sections/skills/skills.component';
 import { ContactComponent } from '../sections/contact/contact.component';
 
 export const environment = {
@@ -11,14 +10,12 @@ export const environment = {
   componentSelectors: [
     HeaderComponent,
     ProjectsComponent,
-    SkillsComponent,
     ContactComponent,
   ],
 
   sectionsTitle: [
     'Início',
     'Projetos',
-    'Habilidades',
     'Contato',
   ],
 
@@ -26,19 +23,25 @@ export const environment = {
     'var(--app-primary-color)',
     'transparent',
     'white',
-    'white',
   ],
 
   boxMargin: [
     '10vmin',
     '0vmin',
-    '20vmin',
     '30vmin',
   ],
+
   boxPadding: [
     '64px',
     '128px',
     '128px',
-    '128px',
-],
+  ],
+
+  socialMediaLinks: {
+    linkedin: 'https://www.linkedin.com/in/moisesmarchinipereira/',
+    github: 'https://github.com/MoisesMarchini/',
+    itchIo: 'https://moisesmp.itch.io/',
+    email: 'mailto:moisesmarchinipereira@gmail.com',
+    phone: 'https://api.whatsapp.com/send?phone=5521970632544',
+  }
 }

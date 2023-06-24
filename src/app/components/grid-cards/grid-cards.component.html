@@ -19,8 +19,16 @@ class="wrapper">
           </ng-container>
         </div>
         <div class="my-btn-group d-flex gap-2 position-absolute bottom-0 start-0 m-2">
-          <a class="btn btn-primary shadow-sm" target="_blank" [href]="item.links.demo">Demo</a>
-          <a class="btn btn-primary shadow-sm" target="_blank" [href]="item.links.github">Github</a>
+          <ng-container *ngIf="item.links.demo">
+            <a class="btn-hover-fill light sm-padding cursor-0" target="_blank" [href]="item.links.demo">
+              <span class="title">Demo</span>
+            </a>
+          </ng-container>
+          <ng-container *ngIf="item.links.github">
+            <a class="btn-hover-fill light sm-padding cursor-0" target="_blank" [href]="item.links.github">
+              <span class="title">Github</span>
+            </a>
+          </ng-container>
         </div>
       </div>
     </div>

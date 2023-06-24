@@ -5,17 +5,19 @@
     <h3 class="h2">{{line1}}</h3>
     <div
     id="animated-text-container"
-    class="animated-text-container" (pointerenter)="AnimatedTextMouseEnter($event)" >
+    class="animated-text-container">
+      <ng-container *ngFor="let word of animatedText">
+        <h1 [class.d-none]="word !== animatedText1">
+          <ng-container *ngFor="let character of word.split(''); let i = index">
+            <span
+            style="--index: {{i}};"
+            class="title-character"
+            >{{character}}</span>
+          </ng-container>
+        </h1>
+      </ng-container>
       <h1>
-        <ng-container *ngFor="let character of convertStringIntoArray(animatedText1); let i = index">
-          <span
-          style="--index: {{i}};"
-          class="title-character"
-          >{{character}}</span>
-        </ng-container>
-      </h1>
-      <h1>
-        <ng-container *ngFor="let character of convertStringIntoArray(animatedText2); let i = index">
+        <ng-container *ngFor="let character of animatedText2.split(''); let i = index">
           <span
           style="--index: {{i + animatedText1.length}}; "
           class="title-character"
@@ -24,12 +26,11 @@
       </h1>
     </div>
     <p class="align-self-end h2 d-flex gap-2 mt-2">
-      <a href="#" class="social-link">
-        <i class="fa-brands fa-github"></i>
-      </a>
-      <a href="#" class="social-link">
-        <i class="fa-brands fa-linkedin-in"></i>
-      </a>
+      <ng-container *ngFor="let item of socialMediaLinks">
+        <a [href]="item.link" target="_blank" class="social-link cursor-m-0">
+          <i [class]="item.fontawesomeIcon"></i>
+        </a>
+      </ng-container>
     </p>
   </div>
 

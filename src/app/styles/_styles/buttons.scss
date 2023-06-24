@@ -1,0 +1,53 @@
+.btn-hover-fill{
+  outline: 2px solid var(--app-body-color);
+  outline-offset: 0;
+  border: 0;
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  flex-wrap: nowrap;
+  gap: .5rem;
+}
+
+.btn-hover-fill.sm-padding{
+  padding: .5rem .75rem;
+}
+
+.btn-hover-fill .title,
+.btn-hover-fill .icon{
+  mix-blend-mode: difference;
+  color: white;
+}
+
+.btn-hover-fill::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  background-color: var(--app-body-color);
+  transition: width var(--default-anim-duration);
+}
+
+.btn-hover-fill:hover::before, .btn-hover-fill:focus-within::before{
+  width: 100%;
+}
+
+.btn-hover-fill.light{
+  background-color: white;
+  outline-color: black;
+  &::before{
+    background-color: black;
+  }
+}
+
+.btn-hover-fill.dark{
+  background-color: black;
+  outline-color: white;
+  &::before{
+    background-color: white;
+  }
+}

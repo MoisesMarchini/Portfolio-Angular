@@ -35,6 +35,7 @@
 .card.card-project{
   min-height: 200px;
   justify-content: flex-end;
+  overflow: hidden;
   --color-1: rgba(255,255,255, 0.35);
   --color-2: rgba(255,255,255, 0.25);
 
@@ -42,15 +43,17 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
-    transition: var(--default-anim-duration) ease;
+    transition: filter var(--default-anim-duration) ease;
     filter: brightness(0.5) grayscale(1);
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
     animation: bgAnimated 8s infinite alternate linear;
     animation-play-state: paused;
     z-index: 0;
+    object-position: 0% 0%;
   }
 
   .card-content{
@@ -64,11 +67,11 @@
       color: var(--app-primary-color);
       opacity: 1;
     }
-    .btn{
+    .my-btn-group{
+      transform: translateY(100px);
       font-size: .8rem;
       transition: var(--default-anim-duration) ease;
       opacity: 0;
-      transform: translateY(100px);
       border: 0;
       font-weight: 600;
       text-transform: uppercase;
@@ -94,7 +97,7 @@
   }
 }
 
-.card.card-project:hover{
+.card.card-project:hover, .card.card-project:focus-within{
   border-radius: 0;
   transform: scale(1.05);
   z-index: 1;
@@ -115,7 +118,7 @@
       opacity: 0;
       transform: translateY(-100px);
     }
-    .btn{
+    .my-btn-group{
       opacity: 1;
       transform: translateY(0px);
     }

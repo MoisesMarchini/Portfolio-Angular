@@ -20,8 +20,8 @@ export interface ProjectCard{
   title: string,
   tags: { title: string, fontAwesomeIcon: string, }[],
   links: {
-    demo: string,
-    github: string,
+    demo?: string,
+    github?: string,
   },
   background: string,
 }
