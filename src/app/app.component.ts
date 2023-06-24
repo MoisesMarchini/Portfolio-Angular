@@ -9,7 +9,7 @@ import { environment } from './helpers/environment';
 })
 export class AppComponent implements AfterViewInit {
   appLoaded = false;
-  title = 'Portfolio-Angular';
+  title = 'Moisés Marchini - Portfólio';
 
   componentSelectors = environment.componentSelectors;
 
