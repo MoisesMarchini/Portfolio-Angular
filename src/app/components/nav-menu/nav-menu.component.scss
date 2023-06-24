@@ -93,10 +93,11 @@
         transition: calc(var(--default-anim-duration) * .5) linear;
       }
       &.active{
-        border-left: 80px solid white;
+        border-left: 60px solid white;
+        -webkit-text-fill-color: white;
       }
       &:hover, &.active, &:focus-within{
-        transform: translateX(0px);
+        padding-left: 20px;
         .text-filled{
           width: 100%;
         }

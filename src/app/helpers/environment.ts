@@ -1,12 +1,11 @@
 import { HeaderComponent } from '../sections/header/header.component';
-import { AccordionComponent } from '../components/accordion/accordion.component';
 import { ProjectsComponent } from '../sections/projects/projects.component';
 import { SkillsComponent } from '../sections/skills/skills.component';
 import { ContactComponent } from '../sections/contact/contact.component';
 
 export const environment = {
   enabled3d: false,
-  currentActiveSection: 3,
+  currentActiveSection: 0,
   darkMode: false,
 
   componentSelectors: [

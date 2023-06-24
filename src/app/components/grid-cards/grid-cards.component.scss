@@ -21,20 +21,22 @@
 
 .card{
   --transition: var(--default-anim-duration) ease;
-  border: 2px solid var(--app-body-color);
+  border: 2px solid var(--app-body-bg);
+  outline: 2px solid var(--app-body-color);
   border-radius: 4px;
   display: flex;
   flex-direction: column;
   transition:
     transform var(--transition),
     opacity var(--transition),
-    border-radius var(--transition),
-    border var(--transition);
+    border-radius var(--transition);
 }
 
 .card.card-project{
   min-height: 200px;
   justify-content: flex-end;
+  --color-1: rgba(255,255,255, 0.35);
+  --color-2: rgba(255,255,255, 0.25);
 
   .card-image-bg{
     height: 100%;
@@ -46,7 +48,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    animation: bgAnimated 12s infinite alternate ease-in-out;
+    animation: bgAnimated 8s infinite alternate linear;
     animation-play-state: paused;
     z-index: 0;
   }
@@ -87,19 +89,19 @@
     background-size: 100% calc(var(--lines-height) *2);
     width: 100%;
     height: 100%;
-    transition: opacity calc(var(--default-anim-duration) / 2);
+    transition: opacity calc(var(--default-anim-duration));
     animation: linesAnimated var(--lines-animation-duration) infinite forwards linear;
   }
 }
 
 .card.card-project:hover{
   border-radius: 0;
-  border: 2px solid var(--app-primary-color);
   transform: scale(1.05);
   z-index: 1;
 
   &::before{
     opacity: 0;
+    animation-play-state: paused;
   }
   .card-image-bg{
     filter: brightness(1) grayscale(0);

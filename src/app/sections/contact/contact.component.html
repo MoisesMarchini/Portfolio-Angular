@@ -1,12 +1,15 @@
 <div class="wrapper">
-  <h2 style="margin: calc(var(--default-padding) * 0.25) 0">Contato</h2>
+  <div class="section-header">
+    <h2>Contato</h2>
+  </div>
   <div class="d-flex flex-column flex-lg-row flex-wrap gap-3 text-uppercase fw-bold">
-    <ng-container *ngFor="let item of tempArray">
+    <ng-container *ngFor="let item of contactLinks">
       <a
-      href="#"
-      class="card-contact p-3" data-text="Linkedin">
-        <span class="normal-text">Linkedin</span>
-        <!-- <span class="inverted-text">Linkedin</span> -->
+      [href]="item.link"
+      target="_blank"
+      class="card-contact py-3 px-4">
+        <i [class]="item.fontawesomeIcon+' icon'"></i>
+        <span class="title">{{item.title}}</span>
       </a>
     </ng-container>
   </div>

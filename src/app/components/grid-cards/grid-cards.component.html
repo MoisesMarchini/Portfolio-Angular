@@ -1,8 +1,10 @@
 <div
 style="--card-ideal-width: {{idealWidth}};"
 class="wrapper">
-  <h2 style="margin: calc(var(--default-padding) * 0.25) 0">{{title}}</h2>
 
+<div class="section-header">
+  <h2>{{title}}</h2>
+</div>
 <div class="cards-container">
   <ng-container *ngFor="let item of projects">
     <div

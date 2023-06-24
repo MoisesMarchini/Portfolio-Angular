@@ -7,7 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  tempArray = Array(3).fill(0);
+  contactLinks: {title: string, link: string, fontawesomeIcon?: string}[] = [
+    {
+      title: 'Whatsapp',
+      link: '#',
+      fontawesomeIcon: 'fa-solid fa-arrow-up-right-from-square'
+    },
+    {
+      title: 'E-mail',
+      link: '#',
+      fontawesomeIcon: 'fa-solid fa-arrow-up-right-from-square'
+    },
+    {
+      title: 'Linkedin',
+      link: '#',
+      fontawesomeIcon: 'fa-solid fa-arrow-up-right-from-square'
+    },
+  ]
+
   constructor() { }
 
   ngOnInit() {

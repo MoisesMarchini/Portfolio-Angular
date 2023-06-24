@@ -1,9 +1,12 @@
 <div
 style="--default-margin: {{boxMargin()}}; --default-padding: {{boxPadding()}}"
-class="app-wrapper">
+class="app-wrapper overflow-hidden">
+  <app-cursor class="d-none d-lg-inline"></app-cursor>
   <app-nav-menu></app-nav-menu>
   <ng-container *ngFor="let selector of componentSelectors; let i = index">
     <section
+    appLookAtMouse
+    [showGradient]="false"
     [class.active]="currentSection() === i">
       <div
       [class.prev]="currentSection() > i"

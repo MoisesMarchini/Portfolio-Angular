@@ -3,8 +3,8 @@
     <ng-container *ngFor="let item of accordionElements; let i = index">
       <div
       appLookAtMouse
-      [id]="'panel_'+i"
       [showGradient]="false"
+      [id]="'panel_'+i"
       [class.active]="i===panelSelected"
       style="--accordion-color: var(--app-primary-color);"
       (click)="onClickPanel('panel_'+i, i)"

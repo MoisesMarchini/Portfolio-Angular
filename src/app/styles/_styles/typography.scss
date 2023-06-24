@@ -3,3 +3,7 @@
 body{
   font-family: 'Roboto Condensed', sans-serif;
 }
+
+a i, a span, button i, button div, button span{
+  pointer-events: none;
+}
