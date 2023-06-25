@@ -3,6 +3,8 @@ import { ProjectsComponent } from '../sections/projects/projects.component';
 import { ContactComponent } from '../sections/contact/contact.component';
 
 export const environment = {
+  loaded: false,
+  loadTimer: 2500,
   enabled3d: false,
   currentActiveSection: 0,
   darkMode: false,

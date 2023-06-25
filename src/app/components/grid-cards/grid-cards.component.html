@@ -21,11 +21,13 @@ class="wrapper">
         <div class="my-btn-group d-flex gap-2 position-absolute bottom-0 start-0 m-2">
           <ng-container *ngIf="item.links.demo">
             <a class="btn-hover-fill light sm-padding cursor-0" target="_blank" [href]="item.links.demo">
+              <i class="fa-solid fa-arrow-up-right-from-square icon"></i>
               <span class="title">Demo</span>
             </a>
           </ng-container>
           <ng-container *ngIf="item.links.github">
             <a class="btn-hover-fill light sm-padding cursor-0" target="_blank" [href]="item.links.github">
+              <i class="fa-solid fa-arrow-up-right-from-square icon"></i>
               <span class="title">Github</span>
             </a>
           </ng-container>

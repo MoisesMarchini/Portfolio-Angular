@@ -6,7 +6,6 @@
   position: fixed;
   top: 0;
   left: 0;
-  overflow: hidden;
   background-color: transparent;
   pointer-events: none;
   z-index: 100000000;
@@ -27,7 +26,3 @@
 #cursor.m-0::before{
   margin: 0;
 }
-
-// #cursor.opacity-0::before{
-//   margin: 0;
-// }

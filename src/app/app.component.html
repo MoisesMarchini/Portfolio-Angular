@@ -1,7 +1,7 @@
-<!-- <div class="loader" [class.loaded]="appLoaded"></div> -->
 <div
 style="--default-margin: {{boxMargin()}}; --default-padding: {{boxPadding()}}"
 class="app-wrapper overflow-hidden">
+  <app-loader></app-loader>
   <app-cursor class="d-none d-lg-inline"></app-cursor>
   <app-nav-menu></app-nav-menu>
   <ng-container *ngFor="let selector of componentSelectors; let i = index">
@@ -13,7 +13,9 @@ class="app-wrapper overflow-hidden">
       [class.prev]="currentSection() > i"
       [class.next]="currentSection() < i"
       class="section-animation">
-        <ng-container *ngComponentOutlet="selector"></ng-container>
+        <ng-container *ngIf="appLoaded()">
+          <ng-container *ngComponentOutlet="selector"></ng-container>
+        </ng-container>
       </div>
     </section>
   </ng-container>

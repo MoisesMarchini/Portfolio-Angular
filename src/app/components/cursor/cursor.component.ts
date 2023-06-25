@@ -10,6 +10,7 @@ export class CursorComponent {
   @ViewChild('cursor') cursor!: ElementRef;
   private buttonRect: DOMRect | null = null;
   private defaultCursorSize = '1.5rem';
+  private animDuration = 800;
 
   @HostListener('document:mousemove', ['$event'])
   onMouseMove(e: MouseEvent) {
@@ -17,9 +18,10 @@ export class CursorComponent {
     const isPointerCursor = window.getComputedStyle(e.target as Element).cursor === 'pointer';
     const buttonElement = e.target as HTMLElement;
     const buttonClassList = buttonElement.classList;
-    const excludedClass = buttonClassList.contains('nav-button');
+    const excludedClass = buttonClassList.contains('nav-button') || buttonClassList.contains('no-cursor');
     const btnNoMarginClass = buttonClassList.contains('cursor-m-0') || buttonClassList.contains('cursor-0');
     const btnNoOpacityClass = buttonClassList.contains('cursor-opa-0') || buttonClassList.contains('cursor-0');
+    const btnNoGrowClass = buttonClassList.contains('cursor-grow-0');
 
     CursorHelper.x = e.clientY;
     CursorHelper.y = e.clientY;
@@ -27,16 +29,19 @@ export class CursorComponent {
     const x = (e.clientX - cursorElement.offsetWidth / 2),
           y = e.clientY - cursorElement.offsetHeight / 2;
 
-    const keyframes = {
+    const keyframes: {transform: string} = {
       transform: `translate(${x}px, ${y}px)`
     }
 
     if (isPointerCursor && !excludedClass) {
       this.buttonRect = buttonElement.getBoundingClientRect();
-      cursorElement.style.width = `${this.buttonRect.width}px`;
-      cursorElement.style.height = `${this.buttonRect.height}px`;
-      keyframes.transform = `translate(${this.buttonRect.x}px, ${this.buttonRect.y}px)`;
-      cursorElement.classList.add('rounded-0');
+
+      if(!btnNoGrowClass){
+        keyframes.transform = `translate(${this.buttonRect.x}px, ${this.buttonRect.y}px)`;
+        cursorElement.style.width = `${this.buttonRect.width}px`;
+        cursorElement.style.height = `${this.buttonRect.height}px`;
+        cursorElement.classList.add('rounded-0');
+      }
       if(btnNoMarginClass)
         cursorElement.classList.add('m-0');
 
@@ -51,7 +56,7 @@ export class CursorComponent {
     }
 
     cursorElement.animate(keyframes, {
-      duration: 800,
+      duration: this.animDuration,
       fill: "forwards",
       timingFunction: 'ease-in-out'
     });

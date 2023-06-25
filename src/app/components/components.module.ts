@@ -4,6 +4,7 @@ import { CursorComponent } from './cursor/cursor.component';
 import { DirectivesModule } from '../directives/directives.module';
 import { GridCardsComponent } from './grid-cards/grid-cards.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
+import { LoaderComponent } from './loader/loader.component';
 
 
 
@@ -12,11 +13,13 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
     CursorComponent,
     GridCardsComponent,
     NavMenuComponent,
+    LoaderComponent,
   ],
   exports: [
     CursorComponent,
     GridCardsComponent,
     NavMenuComponent,
+    LoaderComponent,
   ],
   imports: [
     CommonModule,

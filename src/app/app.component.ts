@@ -8,7 +8,7 @@ import { environment } from './helpers/environment';
   changeDetection: ChangeDetectionStrategy.Default
 })
 export class AppComponent implements AfterViewInit {
-  appLoaded = false;
+  appLoaded() { return environment.loaded; }
   title = 'Moisés Marchini - Portfólio';
 
   componentSelectors = environment.componentSelectors;
