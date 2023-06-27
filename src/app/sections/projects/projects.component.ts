@@ -10,6 +10,24 @@ export class ProjectsComponent {
 
   projects: ProjectCard[] = [
     {
+      title: 'Pokedex',
+      tags: [
+        {
+          title: 'Angular',
+          fontAwesomeIcon: 'fa-brands fa-angular'
+        },
+        {
+          title: 'Sass',
+          fontAwesomeIcon: 'fa-brands fa-sass'
+        },
+      ],
+      links: {
+        demo: 'https://mmp-pokedex.vercel.app/',
+        github: 'https://github.com/MoisesMarchini/Pokedex',
+      },
+      background: '/assets/images/projects/pokedex-cover.png',
+    },
+    {
       title: 'TV Pipoca',
       tags: [
         {
