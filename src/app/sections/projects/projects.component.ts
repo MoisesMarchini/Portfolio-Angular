@@ -10,6 +10,24 @@ export class ProjectsComponent {
 
   projects: ProjectCard[] = [
     {
+      title: 'FurryHaven',
+      tags: [
+        {
+          title: 'Angular',
+          fontAwesomeIcon: 'fa-brands fa-angular'
+        },
+        {
+          title: 'Sass',
+          fontAwesomeIcon: 'fa-brands fa-sass'
+        },
+      ],
+      links: {
+        demo: 'https://mmp-furryhaven.vercel.app/',
+        github: 'https://github.com/MoisesMarchini/LandingPage-FurryHaven',
+      },
+      background: '/assets/images/projects/furryhaven-cover.png',
+    },
+    {
       title: 'Pokedex',
       tags: [
         {
@@ -66,28 +84,6 @@ export class ProjectsComponent {
         github: 'https://github.com/MoisesMarchini/NetMovies',
       },
       background: '/assets/images/projects/netmovies-cover.png',
-    },
-    {
-      title: 'StarDevs',
-      tags: [
-        {
-          title: 'Html',
-          fontAwesomeIcon: 'fa-brands fa-html5'
-        },
-        {
-          title: 'css',
-          fontAwesomeIcon: 'fa-brands fa-css3-alt'
-        },
-        {
-          title: 'javascript',
-          fontAwesomeIcon: 'fa-brands fa-js'
-        },
-      ],
-      links: {
-        demo: 'https://moisesmarchini.000webhostapp.com/potfolio/Star-Devs/index.html',
-        github: 'https://github.com/MoisesMarchini/Star-Devs',
-      },
-      background: '/assets/images/projects/stardevs-cover.png',
     },
     {
       title: 'Tiny Despair',
