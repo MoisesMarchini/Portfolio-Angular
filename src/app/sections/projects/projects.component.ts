@@ -10,6 +10,24 @@ export class ProjectsComponent {
 
   projects: ProjectCard[] = [
     {
+      title: 'TaskMaster',
+      tags: [
+        {
+          title: 'Angular',
+          fontAwesomeIcon: 'fa-brands fa-angular'
+        },
+        {
+          title: 'Sass',
+          fontAwesomeIcon: 'fa-brands fa-sass'
+        },
+      ],
+      links: {
+        demo: 'https://mmp-taskmaster.vercel.app/',
+        github: 'https://github.com/MoisesMarchini/TaskMaster',
+      },
+      background: '/assets/images/projects/taskmaster-cover.png',
+    },
+    {
       title: 'FurryHaven',
       tags: [
         {
