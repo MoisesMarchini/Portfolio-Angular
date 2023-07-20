@@ -70,13 +70,18 @@
       rotate var(--default-anim-duration) ease;
 
     height: calc(100vh - var(--default-margin));
-    height: calc(100svh - var(--default-margin));
     width: calc(100vw - var(--default-margin));
-    width: calc(100svw - var(--default-margin));
     background-color: transparent;
     &::before, &::after{
       animation: none;
       opacity: 0;
     }
+  }
+}
+
+@supports (height: 100svh) and (width: 100svw) {
+  .box {
+    height: calc(100svh - var(--default-margin));
+    width: calc(100svw - var(--default-margin));
   }
 }

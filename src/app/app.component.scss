@@ -25,9 +25,7 @@ section{
   background-color: var(--app-body-bg);
 
   height: calc(100vh - var(--default-margin));
-  height: calc(100svh - var(--default-margin));
   width: calc(100vw - var(--default-margin));
-  width: calc(100svw - var(--default-margin));
   margin: calc(var(--default-margin) * .5);
   overflow: hidden;
 
@@ -44,4 +42,11 @@ section{
 section.active{
   opacity: 1;
   pointer-events: all;
+}
+
+@supports (height: 100svh) and (width: 100svw) {
+  section {
+    height: calc(100svh - var(--default-margin));
+    width: calc(100svw - var(--default-margin));
+  }
 }

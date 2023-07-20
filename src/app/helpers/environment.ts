@@ -28,9 +28,9 @@ export const environment = {
   ],
 
   boxMargin: [
-    '10vmin',
-    '0vmin',
-    '30vmin',
+    'max(10vmin, 5px)',
+    '0px',
+    'max(30vmin, 10px)',
   ],
 
   boxPadding: [
