@@ -1,5 +1,5 @@
 import { Directive, ElementRef, HostListener, Renderer2, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
-import { environment } from 'src/app/helpers/environment';
+import { environment } from 'src/app/environments/environment';
 
 @Directive({
   selector: '[appLookAtMouse]'
@@ -13,7 +13,7 @@ export class LookAtMouseDirective implements OnInit, OnChanges{
     return this.enabled && environment.enabled3d;
   }
 
-  private get animationDuration() { 
+  private get animationDuration() {
     return environment.enabled3d? 800 : 0
   }
 

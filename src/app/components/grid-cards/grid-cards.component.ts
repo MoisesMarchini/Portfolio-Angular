@@ -23,4 +23,5 @@ export interface ProjectCard{
     github?: string,
   },
   background: string,
+  description: string,
 }

@@ -1,5 +1,5 @@
 import { Component, AfterViewInit, ChangeDetectionStrategy, OnInit } from '@angular/core';
-import { environment } from './helpers/environment';
+import { environment } from './environments/environment';
 
 @Component({
   selector: 'app-root',

@@ -1,6 +1,6 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { Subscription, interval } from 'rxjs';
-import { environment } from 'src/app/helpers/environment';
+import { environment } from 'src/app/environments/environment';
 
 const TEXT1 = ['FRONT-END', 'BACK-END', 'GAME'];
 const TEXT2 = 'DEVELOPER';

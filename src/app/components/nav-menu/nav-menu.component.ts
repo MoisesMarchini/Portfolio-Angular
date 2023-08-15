@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { environment } from 'src/app/helpers/environment';
+import { environment } from 'src/app/environments/environment';
 
 @Component({
   selector: 'app-nav-menu',
