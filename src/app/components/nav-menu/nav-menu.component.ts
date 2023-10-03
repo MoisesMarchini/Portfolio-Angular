@@ -10,25 +10,12 @@ export class NavMenuComponent implements OnInit {
 
   isOpen = false;
 
-  darkMode() {
-    return environment.darkMode;
-  }
-
-  sectionsCount() {
-    return environment.componentSelectors;
-  }
+  darkMode() { return environment.darkMode }
+  routeSelectors() { return environment.routeSelectors }
 
   constructor() { }
 
   ngOnInit() {
-  }
-
-  setCurrentSection(section: number) {
-    environment.currentActiveSection = section;
-  }
-
-  isCurrentSection(section: number) {
-    return environment.currentActiveSection === section;
   }
 
   getCurrentSectionTitle(section: number) {
@@ -44,5 +31,6 @@ export class NavMenuComponent implements OnInit {
     else
       body.classList.remove('dark-mode');
   }
+
 
 }

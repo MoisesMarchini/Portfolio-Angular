@@ -5,6 +5,7 @@ import { DirectivesModule } from '../directives/directives.module';
 import { GridCardsComponent } from './grid-cards/grid-cards.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { LoaderComponent } from './loader/loader.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -24,6 +25,7 @@ import { LoaderComponent } from './loader/loader.component';
   imports: [
     CommonModule,
     DirectivesModule,
+    RouterModule
   ]
 })
 export class ComponentsModule { }

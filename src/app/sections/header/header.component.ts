@@ -1,5 +1,6 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, HostBinding } from '@angular/core';
 import { Subscription, interval } from 'rxjs';
+import { fadeInOutAnimation } from 'src/app/animations/fade-in-out.animation';
 import { environment } from 'src/app/environments/environment';
 
 const TEXT1 = ['FRONT-END', 'BACK-END', 'GAME'];
@@ -9,9 +10,10 @@ const TEXT2 = 'DEVELOPER';
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
-  changeDetection: ChangeDetectionStrategy.Default
+  animations: [fadeInOutAnimation]
 })
 export class HeaderComponent implements OnInit {
+  @HostBinding('@routeAnimationTrigger') routeAnimation = true;
 
   line1 = 'Moisés Marchini';
   private intervalSubscription?: Subscription;
@@ -39,6 +41,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.startIntervalTask();
+    environment.boxMargin
   }
 
   startIntervalTask() {

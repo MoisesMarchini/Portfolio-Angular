@@ -14,11 +14,6 @@ import { ContactComponent } from './contact/contact.component';
     ProjectsComponent,
     HeaderComponent,
     ContactComponent,
-  ],
-  exports: [
-    ProjectsComponent,
-    HeaderComponent,
-    ContactComponent,
   ]
 })
 export class SectionsModule { }

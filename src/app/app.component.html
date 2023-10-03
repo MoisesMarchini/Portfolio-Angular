@@ -1,22 +1,14 @@
 <div
-style="--default-margin: {{boxMargin()}}; --default-padding: {{boxPadding()}}"
-class="app-wrapper overflow-hidden">
+  style="--default-margin: {{ boxMargin() }};
+  --default-padding: {{ boxPadding() }}"
+  class="app-wrapper overflow-hidden"
+>
   <app-loader></app-loader>
   <app-cursor class="d-none d-lg-inline"></app-cursor>
   <app-nav-menu></app-nav-menu>
-  <ng-container *ngFor="let selector of componentSelectors; let i = index">
-    <section
-    appLookAtMouse
-    [showGradient]="false"
-    [class.active]="currentSection() === i">
-      <div
-      [class.prev]="currentSection() > i"
-      [class.next]="currentSection() < i"
-      class="section-animation">
-        <ng-container *ngIf="appLoaded()">
-          <ng-container *ngComponentOutlet="selector"></ng-container>
-        </ng-container>
-      </div>
-    </section>
-  </ng-container>
+  <section>
+    <div class="section-animation">
+      <router-outlet></router-outlet>
+    </div>
+  </section>
 </div>

@@ -4,23 +4,28 @@
 </button>
 
 <button class="btn btn-dark-mode" (click)="changeDarkMode()">
-  <i class="fa-regular fa-moon btn-icon" [class.inactive]="darkMode()" ></i>
-  <i class="fa-solid fa-moon btn-icon" [class.inactive]="!darkMode()" ></i>
+  <i class="fa-regular fa-moon btn-icon" [class.inactive]="darkMode()"></i>
+  <i class="fa-solid fa-moon btn-icon" [class.inactive]="!darkMode()"></i>
 </button>
 
-
-<div style="--total-menus: {{sectionsCount.length}};" class="w-100 h-100 nav-container" [class.active]="isOpen" (click)="isOpen = false">
-  <!-- <button style="--index: 0" class="btn-circle" (click)="increasePage(-1)" ></button> -->
+<div
+  style="--total-menus: {{ routeSelectors.length }};"
+  class="w-100 h-100 nav-container"
+  [class.active]="isOpen"
+  (click)="isOpen = false"
+>
   <div class="d-flex flex-column nav-buttons">
-    <ng-container *ngFor="let item of sectionsCount(); let i = index">
-
-      <button class="nav-button" [class.active]="isCurrentSection(i)" (click)="setCurrentSection(i)">
-        {{getCurrentSectionTitle(i)}}
-        <div class="text-filled">
-          {{getCurrentSectionTitle(i)}}
+    <ng-container *ngFor="let route of routeSelectors(); let i = index">
+      <a
+        [routerLink]="'/' + route"
+        routerLinkActive="active"
+        class="nav-button"
+      >
+        {{ getCurrentSectionTitle(i) }}
+        <div class="text-filled cursor-grow-0">
+          {{ getCurrentSectionTitle(i) }}
         </div>
-      </button>
-
+      </a>
     </ng-container>
   </div>
 </div>

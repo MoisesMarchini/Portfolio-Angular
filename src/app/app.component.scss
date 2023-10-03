@@ -14,6 +14,8 @@ section{
 
   opacity: 0;
   pointer-events: none;
+  opacity: 1;
+  pointer-events: all;
   outline: 2px solid;
   transition:
     width var(--default-anim-duration),
@@ -37,11 +39,6 @@ section{
     bottom: 0;
     overflow: auto;
   }
-}
-
-section.active{
-  opacity: 1;
-  pointer-events: all;
 }
 
 @supports (height: 100svh) and (width: 100svw) {

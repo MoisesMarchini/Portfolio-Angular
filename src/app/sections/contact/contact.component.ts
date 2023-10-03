@@ -1,12 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
+import { fadeInOutAnimation } from 'src/app/animations/fade-in-out.animation';
 import { environment } from 'src/app/environments/environment';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.css']
+  styleUrls: ['./contact.component.css'],
+  animations: [fadeInOutAnimation]
 })
 export class ContactComponent implements OnInit {
+  @HostBinding('@routeAnimationTrigger') routeAnimation = true;
 
   contactLinks: {title: string, link: string, fontawesomeIcon?: string}[] = [
     {

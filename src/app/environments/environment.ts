@@ -9,10 +9,10 @@ export const environment = {
   currentActiveSection: 0,
   darkMode: false,
 
-  componentSelectors: [
-    HeaderComponent,
-    ProjectsComponent,
-    ContactComponent,
+  routeSelectors: [
+    'home',
+    'projects',
+    'contact',
   ],
 
   sectionsTitle: [
