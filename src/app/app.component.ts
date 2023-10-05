@@ -1,6 +1,6 @@
-import { Component, AfterViewInit, OnInit } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { environment } from './environments/environment';
-import { RouteControllerService } from './services/route-controller.service';
+import { RouteControllerService } from './shared/services/route-controller.service';
 
 @Component({
   selector: 'app-root',

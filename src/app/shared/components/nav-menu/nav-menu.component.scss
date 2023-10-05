@@ -1,0 +1,141 @@
+.nav-btns-top {
+  --btn-margin: calc(var(--default-margin) * 0.5);
+  --btn-top: 0%;
+  --btn-left: 0%;
+  position: fixed;
+  left: calc(var(--btn-margin) + var(--btn-left) - 1px);
+  right: calc(var(--btn-margin) + var(--btn-left) - 1px);
+  top: calc(var(--btn-margin) + var(--btn-top) - 1px);
+  z-index: 100;
+  margin: 1px;
+  overflow: hidden;
+  transition: all var(--default-anim-duration) ease,
+    font-size 0ms linear,
+    background-color 0ms linear,
+    outline-color 0ms linear,
+    color 0ms linear;
+  button{
+    font-size: clamp(1.5rem, 2rem, 5vmin);
+    color: var(--app-body-color);
+    width: 4rem;
+    height: 4rem;
+    padding: 0;
+    border-radius: 0;
+    display: grid;
+    place-items: center;
+    background-color: transparent;
+    border: 0;
+    .btn-icon{
+      position: absolute;
+    }
+  }
+}
+
+
+.btn-nav{
+  transition: inherit;
+  .close{
+    transform: rotate(45deg);
+    opacity: 0;
+  }
+}
+
+.btn-dark-mode{
+  transition: inherit;
+  .btn-icon{
+    transition: inherit;
+  }
+  .inactive{
+    transition: none;
+    opacity: 0;
+    rotate: 45deg;
+  }
+
+  &.nav-open{
+    background-color: white;
+    color: black;
+
+    border-radius: 50%;
+    margin: 6px;
+  }
+}
+
+.language-btn-group {
+  width: auto;
+  height: auto;
+  outline: 2px solid var(--app-body-bg);
+  background-color: var(--app-body-bg);
+  button {
+    text-transform: uppercase;
+    opacity: .25;
+    font-size: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+    &.active {
+      opacity: 1;
+    }
+  }
+}
+
+.nav-container{
+  --offset: 0px;
+  --total-menus: 4;
+  position: fixed;
+  background-color: transparent;
+  pointer-events: none;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  .nav-buttons{
+    width: calc(80vw - 40px);
+    gap: 1rem;
+    .nav-button{
+      width: fit-content;
+      position: relative;
+      text-transform: uppercase;
+      text-justify: distribute;
+      text-align: left;
+      font-size: 10vmin;
+      transform: translateX(-40px);
+      text-decoration: none;
+      cursor: pointer;
+
+      font-weight: 900;
+      background-color: transparent;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: white;
+      border: 0px solid white;
+      outline-color: white;
+      .text-filled{
+        position: absolute;
+        top: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 0%;
+        color: white;
+        -webkit-text-fill-color: white;
+        transition: calc(var(--default-anim-duration) * .5) linear;
+      }
+      &.active{
+        border-left: 60px solid white;
+        -webkit-text-fill-color: white;
+      }
+      &:hover, &.active, &:focus-within{
+        padding-left: 20px;
+        .text-filled{
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.nav-container.active{
+  --offset: 120px;
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.75);
+  pointer-events: stroke;
+  backdrop-filter: blur(5px);
+}

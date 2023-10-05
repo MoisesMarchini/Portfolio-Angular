@@ -1,0 +1,51 @@
+<div class="nav-btns-top d-flex">
+  <button class="btn btn-nav" (click)="isOpen = !isOpen">
+    <i class="fa-solid fa-bars open btn-icon"></i>
+    <i class="fa-solid fa-xmark close btn-icon"></i>
+  </button>
+
+  <div
+    class="language-btn-group flex-grow-1 d-flex flex-row justify-content-end align-items-center"
+  >
+    <button
+      (click)="appLanguage = 'pt-br'"
+      [class.active]="appLanguage === 'pt-br'"
+      class="border-0 bg-transparent"
+    >
+      pt
+    </button>
+    <button
+      (click)="appLanguage = 'en'"
+      [class.active]="appLanguage === 'en'"
+      class="border-0 bg-transparent"
+    >
+      en
+    </button>
+  </div>
+  <button class="btn btn-dark-mode" (click)="changeDarkMode()">
+    <i class="fa-regular fa-moon btn-icon" [class.inactive]="darkMode()"></i>
+    <i class="fa-solid fa-moon btn-icon" [class.inactive]="!darkMode()"></i>
+  </button>
+</div>
+
+<div
+  style="--total-menus: {{ routeSelectors.length }};"
+  class="w-100 h-100 nav-container"
+  [class.active]="isOpen"
+  (click)="isOpen = false"
+>
+  <div class="d-flex flex-column nav-buttons">
+    <ng-container *ngFor="let route of routeSelectors(); let i = index">
+      <a
+        [routerLink]="'/' + route"
+        routerLinkActive="active"
+        class="nav-button"
+      >
+        {{ getCurrentSectionTitle(i) }}
+        <div class="text-filled cursor-grow-0">
+          {{ getCurrentSectionTitle(i) }}
+        </div>
+      </a>
+    </ng-container>
+  </div>
+</div>
