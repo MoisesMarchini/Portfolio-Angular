@@ -16,6 +16,52 @@ export const languages = {
 
     projects: [
       {
+        title: 'Medical Victory',
+        tags: [
+          {
+            title: 'Figma',
+            fontAwesomeIcon: 'fa-brands fa-figma'
+          },
+          {
+            title: 'Angular',
+            fontAwesomeIcon: 'fa-brands fa-angular'
+          },
+          {
+            title: 'Sass',
+            fontAwesomeIcon: 'fa-brands fa-sass'
+          },
+        ],
+        links: {
+          demo: 'https://mmp-medical-victory.vercel.app/',
+          github: 'https://github.com/MoisesMarchini/LandingPage-MedicalVictory',
+        },
+        background: '/assets/images/projects/MedicalVictory-cover.png',
+        description: '',
+      },
+      {
+        title: 'EJAM',
+        tags: [
+          {
+            title: 'Figma',
+            fontAwesomeIcon: 'fa-brands fa-figma'
+          },
+          {
+            title: 'Angular',
+            fontAwesomeIcon: 'fa-brands fa-angular'
+          },
+          {
+            title: 'Sass',
+            fontAwesomeIcon: 'fa-brands fa-sass'
+          },
+        ],
+        links: {
+          demo: 'https://ejam-angular.vercel.app/',
+          github: 'https://github.com/MoisesMarchini/Ejam-Angular',
+        },
+        background: '/assets/images/projects/ejam-cover.png',
+        description: '',
+      },
+      {
         title: 'TaskMaster',
         tags: [
           {
@@ -161,6 +207,52 @@ export const languages = {
     },
 
     projects: [
+      {
+        title: 'Medical Victory',
+        tags: [
+          {
+            title: 'Figma',
+            fontAwesomeIcon: 'fa-brands fa-figma'
+          },
+          {
+            title: 'Angular',
+            fontAwesomeIcon: 'fa-brands fa-angular'
+          },
+          {
+            title: 'Sass',
+            fontAwesomeIcon: 'fa-brands fa-sass'
+          },
+        ],
+        links: {
+          demo: 'https://mmp-medical-victory.vercel.app/',
+          github: 'https://github.com/MoisesMarchini/LandingPage-MedicalVictory',
+        },
+        background: '/assets/images/projects/MedicalVictory-cover.png',
+        description: '',
+      },
+      {
+        title: 'EJAM',
+        tags: [
+          {
+            title: 'Figma',
+            fontAwesomeIcon: 'fa-brands fa-figma'
+          },
+          {
+            title: 'Angular',
+            fontAwesomeIcon: 'fa-brands fa-angular'
+          },
+          {
+            title: 'Sass',
+            fontAwesomeIcon: 'fa-brands fa-sass'
+          },
+        ],
+        links: {
+          demo: 'https://ejam-angular.vercel.app/',
+          github: 'https://github.com/MoisesMarchini/Ejam-Angular',
+        },
+        background: '/assets/images/projects/ejam-cover.png',
+        description: '',
+      },
       {
         title: 'TaskMaster',
         tags: [

@@ -10,6 +10,15 @@ import { environment } from 'src/app/environments/environment';
 export class ContactComponent implements OnInit {
   @HostBinding('@routeAnimationTrigger') routeAnimation = true;
 
+  emailLink =
+    {
+      title: 'E-mail',
+      // link: '/'+environment.routeSelectors[3],
+      link: 'mailto:moisesmarchinipereira@gmail.com',
+      fontawesomeIcon: 'fa-solid fa-arrow-up-right-from-square',
+      fontawesomeIconSm: 'fa-solid fa-arrow-up-right-from-square'
+    }
+
   contactLinks: {title: string, link: string, fontawesomeIcon?: string, fontawesomeIconSm?: string}[] = [
     {
       title: 'Whatsapp',
@@ -23,14 +32,8 @@ export class ContactComponent implements OnInit {
       fontawesomeIcon: 'fa-solid fa-arrow-up-right-from-square',
       fontawesomeIconSm: 'fa-solid fa-arrow-up-right-from-square'
     },
+    this.emailLink
   ]
-  emailLink =
-  {
-    title: 'E-mail',
-    link: '/'+environment.routeSelectors[3],
-    fontawesomeIcon: 'fa-solid fa-arrow-up-right-from-square',
-    fontawesomeIconSm: 'fa-solid fa-arrow-up-right-from-square'
-  }
   get pageTitle() { return environment.sectionsTitle[2] }
 
   constructor() { }
