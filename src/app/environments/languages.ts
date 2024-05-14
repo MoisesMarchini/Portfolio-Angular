@@ -1,39 +1,95 @@
 export const languages = {
   'pt-br': {
-    navTitles: [
-      'Início',
-      'Projetos',
-      'Contato',
-      'Contato > Email',
-    ],
+    navTitles: ['Início', 'Projetos', 'Contato', 'Contato > Email'],
 
     words: {
       'your-name': 'Seu Nome',
       'your-email': 'Seu Email',
-      'message': 'Mensagem',
-      'send': 'Enviar',
+      message: 'Mensagem',
+      send: 'Enviar',
     },
 
     projects: [
+      {
+        title: 'Clean Home',
+        tags: [
+          {
+            title: 'Angular',
+            fontAwesomeIcon: 'fa-brands fa-angular',
+          },
+          {
+            title: 'Sass',
+            fontAwesomeIcon: 'fa-brands fa-sass',
+          },
+        ],
+        links: {
+          demo: 'https://green-thumb-git-variants-clean-home-moisesmarchinis-projects.vercel.app/',
+          github:
+            'https://github.com/MoisesMarchini/Template-GreenThumb/tree/variants%2Fclean-home',
+        },
+        background: '/assets/images/projects/clean-home-cover.png',
+        description: '',
+      },
+      {
+        title: 'PetPal',
+        tags: [
+          {
+            title: 'Angular',
+            fontAwesomeIcon: 'fa-brands fa-angular',
+          },
+          {
+            title: 'Sass',
+            fontAwesomeIcon: 'fa-brands fa-sass',
+          },
+        ],
+        links: {
+          demo: 'https://green-thumb-git-variants-petpal-moisesmarchinis-projects.vercel.app/',
+          github:
+            'https://github.com/MoisesMarchini/Template-GreenThumb/tree/variants%2Fpetpal',
+        },
+        background: '/assets/images/projects/petpal-cover.png',
+        description: '',
+      },
+      {
+        title: 'Green Thumb',
+        tags: [
+          {
+            title: 'Angular',
+            fontAwesomeIcon: 'fa-brands fa-angular',
+          },
+          {
+            title: 'Sass',
+            fontAwesomeIcon: 'fa-brands fa-sass',
+          },
+        ],
+        links: {
+          demo: 'https://green-thumb-three.vercel.app/',
+          github:
+            'https://github.com/MoisesMarchini/Template-GreenThumb/tree/master',
+        },
+        background: '/assets/images/projects/green-thumb-cover.png',
+        description: '',
+      },
       {
         title: 'Medical Victory',
         tags: [
           {
             title: 'Figma',
-            fontAwesomeIcon: 'fa-brands fa-figma'
+            fontAwesomeIcon: 'fa-brands fa-figma',
           },
           {
             title: 'Angular',
-            fontAwesomeIcon: 'fa-brands fa-angular'
+            fontAwesomeIcon: 'fa-brands fa-angular',
           },
           {
             title: 'Sass',
-            fontAwesomeIcon: 'fa-brands fa-sass'
+            fontAwesomeIcon: 'fa-brands fa-sass',
           },
         ],
         links: {
           demo: 'https://mmp-medical-victory.vercel.app/',
-          github: 'https://github.com/MoisesMarchini/LandingPage-MedicalVictory',
+          github:
+            'https://github.com/MoisesMarchini/LandingPage-MedicalVictory',
         },
         background: '/assets/images/projects/MedicalVictory-cover.png',
         description: '',
@@ -43,15 +99,15 @@ export const languages = {
         tags: [
           {
             title: 'Figma',
-            fontAwesomeIcon: 'fa-brands fa-figma'
+            fontAwesomeIcon: 'fa-brands fa-figma',
           },
           {
             title: 'Angular',
-            fontAwesomeIcon: 'fa-brands fa-angular'
+            fontAwesomeIcon: 'fa-brands fa-angular',
           },
           {
             title: 'Sass',
-            fontAwesomeIcon: 'fa-brands fa-sass'
+            fontAwesomeIcon: 'fa-brands fa-sass',
           },
         ],
         links: {
@@ -66,11 +122,11 @@ export const languages = {
         tags: [
           {
             title: 'Angular',
-            fontAwesomeIcon: 'fa-brands fa-angular'
+            fontAwesomeIcon: 'fa-brands fa-angular',
           },
           {
             title: 'Sass',
-            fontAwesomeIcon: 'fa-brands fa-sass'
+            fontAwesomeIcon: 'fa-brands fa-sass',
           },
         ],
         links: {
@@ -85,11 +141,11 @@ export const languages = {
         tags: [
           {
             title: 'Angular',
-            fontAwesomeIcon: 'fa-brands fa-angular'
+            fontAwesomeIcon: 'fa-brands fa-angular',
           },
           {
             title: 'Sass',
-            fontAwesomeIcon: 'fa-brands fa-sass'
+            fontAwesomeIcon: 'fa-brands fa-sass',
           },
         ],
         links: {
@@ -104,11 +160,11 @@ export const languages = {
         tags: [
           {
             title: 'Angular',
-            fontAwesomeIcon: 'fa-brands fa-angular'
+            fontAwesomeIcon: 'fa-brands fa-angular',
           },
           {
             title: 'Sass',
-            fontAwesomeIcon: 'fa-brands fa-sass'
+            fontAwesomeIcon: 'fa-brands fa-sass',
           },
         ],
         links: {
@@ -119,53 +175,11 @@ export const languages = {
         description: '',
       },
       {
-        title: 'TV Pipoca',
-        tags: [
-          {
-            title: 'Angular',
-            fontAwesomeIcon: 'fa-brands fa-angular'
-          },
-          {
-            title: 'Sass',
-            fontAwesomeIcon: 'fa-brands fa-sass'
-          },
-        ],
-        links: {
-          demo: 'https://moisesmarchini.000webhostapp.com/potfolio/TVPipoca/',
-          github: 'https://github.com/MoisesMarchini/TVPipoca',
-        },
-        background: '/assets/images/projects/tvpipoca-cover.png',
-        description: '',
-      },
-      {
-        title: 'NetMovies',
-        tags: [
-          {
-            title: 'Html',
-            fontAwesomeIcon: 'fa-brands fa-html5'
-          },
-          {
-            title: 'css',
-            fontAwesomeIcon: 'fa-brands fa-css3-alt'
-          },
-          {
-            title: 'javascript',
-            fontAwesomeIcon: 'fa-brands fa-js'
-          },
-        ],
-        links: {
-          demo: 'https://moisesmarchini.000webhostapp.com/potfolio/NetMovies/index.html',
-          github: 'https://github.com/MoisesMarchini/NetMovies',
-        },
-        background: '/assets/images/projects/netmovies-cover.png',
-        description: '',
-      },
-      {
         title: 'Tiny Despair',
         tags: [
           {
             title: 'Unity',
-            fontAwesomeIcon: 'fa-brands fa-unity'
+            fontAwesomeIcon: 'fa-brands fa-unity',
           },
         ],
         links: {
@@ -179,7 +193,7 @@ export const languages = {
         tags: [
           {
             title: 'Unity',
-            fontAwesomeIcon: 'fa-brands fa-unity'
+            fontAwesomeIcon: 'fa-brands fa-unity',
           },
         ],
         links: {
@@ -191,41 +205,97 @@ export const languages = {
     ],
   },
 
-  'en': {
-    navTitles: [
-      'Home',
-      'Projects',
-      'Contact',
-      'Contact > Email',
-    ],
+  en: {
+    navTitles: ['Home', 'Projects', 'Contact', 'Contact > Email'],
 
     words: {
       'your-name': 'Your Name',
       'your-email': 'Your Email',
-      'message': 'Message',
-      'send': 'Send',
+      message: 'Message',
+      send: 'Send',
     },
 
     projects: [
+      {
+        title: 'Clean Home',
+        tags: [
+          {
+            title: 'Angular',
+            fontAwesomeIcon: 'fa-brands fa-angular',
+          },
+          {
+            title: 'Sass',
+            fontAwesomeIcon: 'fa-brands fa-sass',
+          },
+        ],
+        links: {
+          demo: 'https://green-thumb-git-variants-clean-home-moisesmarchinis-projects.vercel.app/',
+          github:
+            'https://github.com/MoisesMarchini/Template-GreenThumb/tree/variants%2Fclean-home',
+        },
+        background: '/assets/images/projects/clean-home-cover.png',
+        description: '',
+      },
+      {
+        title: 'PetPal',
+        tags: [
+          {
+            title: 'Angular',
+            fontAwesomeIcon: 'fa-brands fa-angular',
+          },
+          {
+            title: 'Sass',
+            fontAwesomeIcon: 'fa-brands fa-sass',
+          },
+        ],
+        links: {
+          demo: 'https://green-thumb-git-variants-petpal-moisesmarchinis-projects.vercel.app/',
+          github:
+            'https://github.com/MoisesMarchini/Template-GreenThumb/tree/variants%2Fpetpal',
+        },
+        background: '/assets/images/projects/petpal-cover.png',
+        description: '',
+      },
+      {
+        title: 'Green Thumb',
+        tags: [
+          {
+            title: 'Angular',
+            fontAwesomeIcon: 'fa-brands fa-angular',
+          },
+          {
+            title: 'Sass',
+            fontAwesomeIcon: 'fa-brands fa-sass',
+          },
+        ],
+        links: {
+          demo: 'https://green-thumb-three.vercel.app/',
+          github:
+            'https://github.com/MoisesMarchini/Template-GreenThumb/tree/master',
+        },
+        background: '/assets/images/projects/green-thumb-cover.png',
+        description: '',
+      },
       {
         title: 'Medical Victory',
         tags: [
           {
             title: 'Figma',
-            fontAwesomeIcon: 'fa-brands fa-figma'
+            fontAwesomeIcon: 'fa-brands fa-figma',
           },
           {
             title: 'Angular',
-            fontAwesomeIcon: 'fa-brands fa-angular'
+            fontAwesomeIcon: 'fa-brands fa-angular',
           },
           {
             title: 'Sass',
-            fontAwesomeIcon: 'fa-brands fa-sass'
+            fontAwesomeIcon: 'fa-brands fa-sass',
           },
         ],
         links: {
           demo: 'https://mmp-medical-victory.vercel.app/',
-          github: 'https://github.com/MoisesMarchini/LandingPage-MedicalVictory',
+          github:
+            'https://github.com/MoisesMarchini/LandingPage-MedicalVictory',
         },
         background: '/assets/images/projects/MedicalVictory-cover.png',
         description: '',
@@ -235,15 +305,15 @@ export const languages = {
         tags: [
           {
             title: 'Figma',
-            fontAwesomeIcon: 'fa-brands fa-figma'
+            fontAwesomeIcon: 'fa-brands fa-figma',
           },
           {
             title: 'Angular',
-            fontAwesomeIcon: 'fa-brands fa-angular'
+            fontAwesomeIcon: 'fa-brands fa-angular',
           },
           {
             title: 'Sass',
-            fontAwesomeIcon: 'fa-brands fa-sass'
+            fontAwesomeIcon: 'fa-brands fa-sass',
           },
         ],
         links: {
@@ -258,11 +328,11 @@ export const languages = {
         tags: [
           {
             title: 'Angular',
-            fontAwesomeIcon: 'fa-brands fa-angular'
+            fontAwesomeIcon: 'fa-brands fa-angular',
           },
           {
             title: 'Sass',
-            fontAwesomeIcon: 'fa-brands fa-sass'
+            fontAwesomeIcon: 'fa-brands fa-sass',
           },
         ],
         links: {
@@ -277,11 +347,11 @@ export const languages = {
         tags: [
           {
             title: 'Angular',
-            fontAwesomeIcon: 'fa-brands fa-angular'
+            fontAwesomeIcon: 'fa-brands fa-angular',
           },
           {
             title: 'Sass',
-            fontAwesomeIcon: 'fa-brands fa-sass'
+            fontAwesomeIcon: 'fa-brands fa-sass',
           },
         ],
         links: {
@@ -296,11 +366,11 @@ export const languages = {
         tags: [
           {
             title: 'Angular',
-            fontAwesomeIcon: 'fa-brands fa-angular'
+            fontAwesomeIcon: 'fa-brands fa-angular',
           },
           {
             title: 'Sass',
-            fontAwesomeIcon: 'fa-brands fa-sass'
+            fontAwesomeIcon: 'fa-brands fa-sass',
           },
         ],
         links: {
@@ -311,53 +381,11 @@ export const languages = {
         description: '',
       },
       {
-        title: 'TV Pipoca',
-        tags: [
-          {
-            title: 'Angular',
-            fontAwesomeIcon: 'fa-brands fa-angular'
-          },
-          {
-            title: 'Sass',
-            fontAwesomeIcon: 'fa-brands fa-sass'
-          },
-        ],
-        links: {
-          demo: 'https://moisesmarchini.000webhostapp.com/potfolio/TVPipoca/',
-          github: 'https://github.com/MoisesMarchini/TVPipoca',
-        },
-        background: '/assets/images/projects/tvpipoca-cover.png',
-        description: '',
-      },
-      {
-        title: 'NetMovies',
-        tags: [
-          {
-            title: 'Html',
-            fontAwesomeIcon: 'fa-brands fa-html5'
-          },
-          {
-            title: 'css',
-            fontAwesomeIcon: 'fa-brands fa-css3-alt'
-          },
-          {
-            title: 'javascript',
-            fontAwesomeIcon: 'fa-brands fa-js'
-          },
-        ],
-        links: {
-          demo: 'https://moisesmarchini.000webhostapp.com/potfolio/NetMovies/index.html',
-          github: 'https://github.com/MoisesMarchini/NetMovies',
-        },
-        background: '/assets/images/projects/netmovies-cover.png',
-        description: '',
-      },
-      {
         title: 'Tiny Despair',
         tags: [
           {
             title: 'Unity',
-            fontAwesomeIcon: 'fa-brands fa-unity'
+            fontAwesomeIcon: 'fa-brands fa-unity',
           },
         ],
         links: {
@@ -371,7 +399,7 @@ export const languages = {
         tags: [
           {
             title: 'Unity',
-            fontAwesomeIcon: 'fa-brands fa-unity'
+            fontAwesomeIcon: 'fa-brands fa-unity',
           },
         ],
         links: {
@@ -381,5 +409,5 @@ export const languages = {
         description: '',
       },
     ],
-  }
-}
+  },
+};
