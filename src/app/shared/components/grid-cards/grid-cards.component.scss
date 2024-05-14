@@ -44,7 +44,7 @@
     width: 100%;
     object-fit: cover;
     transition: filter var(--default-anim-duration) ease;
-    filter: brightness(0.5) grayscale(1);
+    filter: contrast(0.5) opacity(0.75);
     position: absolute;
     top: 0;
     left: 0;
@@ -81,7 +81,7 @@
   &::before{
     content: '';
     position: absolute;
-    opacity: 1;
+    opacity: .75;
     z-index: 1;
     background: linear-gradient(
       var(--color-1),
@@ -107,7 +107,7 @@
     animation-play-state: paused;
   }
   .card-image-bg{
-    filter: brightness(1) grayscale(0);
+    filter: none;
     animation-play-state: running;
   }
 
