@@ -1,53 +1,58 @@
 :root {
-  --default-anim-duration: .5s;
+  --default-anim-duration: 0.5s;
 }
 
-body{
+body {
   transition: all var(--default-anim-duration), color 0s;
 }
 
-*{
+* {
   transition: inherit;
 }
 
 @keyframes pulse {
-  0%{
+  0% {
     opacity: 1;
     transform: scale(1);
   }
-  75%, 100%{
+  75%,
+  100% {
     opacity: 0;
     transform: scale(1.5);
   }
 }
 
-
 @keyframes bgAnimated {
-  from{
-    object-position: 0% 0%;
+  0%,
+  50%,
+  100% {
+    object-position: 50% 50%;
   }
-  to{
+  25% {
     object-position: 100% 100%;
+  }
+  75% {
+    object-position: 0% 0%;
   }
 }
 
 @keyframes linesAnimated {
-  from{
+  from {
     background-position: 0% 0%;
   }
-  to{
+  to {
     background-position: 0% -100%;
   }
 }
 
 @keyframes opacity0To1 {
-  to{
+  to {
     opacity: 1;
   }
 }
 
 @keyframes opacity0To1Copy {
-  to{
+  to {
     opacity: 1;
   }
 }

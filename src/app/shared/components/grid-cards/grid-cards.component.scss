@@ -50,38 +50,50 @@
     left: 0;
     bottom: 0;
     right: 0;
-    animation: bgAnimated 8s infinite alternate linear;
+    animation: bgAnimated 12s infinite alternate linear;
     animation-play-state: paused;
     z-index: 0;
-    object-position: 0% 0%;
+    object-position: 0% 50%;
   }
 
   .card-content{
     z-index: 2;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
+    .card-title {
+      font-size: 1.25rem;
+      margin-bottom: 0;
+    }
     .card-tags{
-      font-size: 1.5rem;
+      font-size: 1rem;
       color: var(--app-primary-color);
-      opacity: 1;
+      color: white;
+      opacity: .5;
     }
     .my-btn-group{
-      transform: translateY(100px);
+      // transform: translateY(100px);
       font-size: .8rem;
       transition: var(--default-anim-duration) ease;
-      opacity: 0;
+      opacity: .5;
       border: 0;
       font-weight: 600;
       text-transform: uppercase;
+      justify-content: flex-end;
+      right: 0;
+      > a {
+        border: 0;
+        outline: 0;
+        padding: .5rem;
+      }
     }
   }
 
   &::before{
     content: '';
     position: absolute;
-    opacity: .75;
+    opacity: .5;
     z-index: 1;
     background: linear-gradient(
       var(--color-1),

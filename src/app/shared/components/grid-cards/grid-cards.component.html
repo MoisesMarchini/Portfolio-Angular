@@ -1,40 +1,48 @@
-<div
-style="--card-ideal-width: {{idealWidth}};"
-class="wrapper">
-
-<div class="section-header">
-  <h2>{{title}}</h2>
-</div>
-<div class="cards-container">
-  <ng-container *ngFor="let item of projects">
-    <div
-    class="card card-project m-0 position-relative bg-transparent overflow-hidden">
-      <img
-      class="card-image-bg" [src]="item.background">
-      <div class="card-content p-3 d-flex gap-2 flex-column">
-        <h3 class="card-title text-uppercase text-light">{{item.title}}</h3>
-        <div class="card-tags d-flex gap-2">
-          <ng-container *ngFor="let tag of item.tags">
-            <i [class]="tag.fontAwesomeIcon" ></i>
-          </ng-container>
-        </div>
-        <div class="my-btn-group d-flex gap-2 position-absolute bottom-0 start-0 m-2">
-          <ng-container *ngIf="item.links.demo">
-            <a class="btn-hover-fill light sm-padding cursor-0" target="_blank" [href]="item.links.demo">
-              <i class="fa-solid fa-arrow-up-right-from-square icon"></i>
-              <span class="title">Demo</span>
-            </a>
-          </ng-container>
-          <ng-container *ngIf="item.links.github">
-            <a class="btn-hover-fill light sm-padding cursor-0" target="_blank" [href]="item.links.github">
-              <i class="fa-solid fa-arrow-up-right-from-square icon"></i>
-              <span class="title">Github</span>
-            </a>
-          </ng-container>
+<div style="--card-ideal-width: {{ idealWidth }};" class="wrapper">
+  <div class="section-header">
+    <h2>{{ title }}</h2>
+  </div>
+  <div class="cards-container">
+    <ng-container *ngFor="let item of projects">
+      <div
+        class="card card-project m-0 position-relative bg-transparent overflow-hidden"
+      >
+        <img class="card-image-bg" [src]="item.background" />
+        <div class="card-content p-3 d-flex gap-2 flex-column">
+          <h3 class="card-title text-uppercase text-light">
+            {{ item.title }}
+          </h3>
+          <div class="card-tags d-flex gap-2">
+            <ng-container *ngFor="let tag of item.tags">
+              <i [class]="tag.fontAwesomeIcon"></i>
+            </ng-container>
+          </div>
+          <div
+            class="my-btn-group d-flex gap-2 position-absolute bottom-0 start-0 m-2"
+          >
+            <ng-container *ngIf="item.links.demo">
+              <a
+                class="btn-hover-fill light sm-padding cursor-0"
+                target="_blank"
+                [href]="item.links.demo"
+              >
+                <i class="fa-solid fa-arrow-up-right-from-square icon"></i>
+                <span class="title">Link</span>
+              </a>
+            </ng-container>
+            <ng-container *ngIf="item.links.github">
+              <a
+                class="btn-hover-fill light sm-padding cursor-0"
+                target="_blank"
+                [href]="item.links.github"
+              >
+                <i class="fa-brands fa-github icon"></i>
+                <span class="title">Github</span>
+              </a>
+            </ng-container>
+          </div>
         </div>
       </div>
-    </div>
-  </ng-container>
-</div>
-
+    </ng-container>
+  </div>
 </div>
