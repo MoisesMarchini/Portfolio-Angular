@@ -11,7 +11,7 @@ export class BlockComponent {
 
   @HostBinding('class') get classNames() {
     return twMerge(
-      'block col-span-4 bg-zinc-800 border-zinc-700 border rounded p-4 text-white',
+      'block col-span-4 bg-zinc-800 border-zinc-700 border rounded p-6 text-white',
       this.elementRef.nativeElement.className
     );
   }

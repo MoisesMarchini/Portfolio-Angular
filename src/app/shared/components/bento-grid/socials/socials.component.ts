@@ -10,7 +10,7 @@ import { twMerge } from 'tailwind-merge';
 export class SocialsComponent extends BlockComponent {
   @HostBinding('class') override get classNames() {
     return twMerge(
-      'col-span-12 md:col-span-6',
+      'col-span-12 md:col-span-4',
       this.elementRef.nativeElement.className
     );
   }
