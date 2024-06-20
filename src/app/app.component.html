@@ -1,14 +1,5 @@
-<main
-  style="--default-margin: {{ boxMargin() }};
-  --default-padding: {{ boxPadding() }}"
-  class="app-wrapper overflow-hidden"
->
-  <app-loader></app-loader>
-  <app-cursor class="d-none d-lg-inline"></app-cursor>
-  <app-nav-menu></app-nav-menu>
-  <section>
-    <div class="section-animation">
-      <router-outlet></router-outlet>
-    </div>
-  </section>
-</main>
+<div class="min-h-screen bg-zinc-900 py-8 px-4">
+  <div class="container mx-auto">
+    <bento-grid></bento-grid>
+  </div>
+</div>
