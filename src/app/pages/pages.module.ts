@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { BentoGridModule } from '../layout/bento-grid/bento-grid.module';
 import { ProjectsPageComponent } from './projects/projects.component';
+import { ProjectDetailsComponent } from './project-details/project-details.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { ProjectsPageComponent } from './projects/projects.component';
     RouterModule,
     BentoGridModule,
   ],
-  declarations: [HomeComponent, ProjectsPageComponent],
+  declarations: [HomeComponent, ProjectsPageComponent, ProjectDetailsComponent],
 })
 export class PagesModule {}

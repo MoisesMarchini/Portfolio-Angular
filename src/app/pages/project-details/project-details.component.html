@@ -1,0 +1,63 @@
+<block class="bg-transparent border-0 grid">
+  <div class="body overflow-hidden">
+    <div class="flex items-baseline gap-2 mb-3">
+      <app-default-button
+        routerLink="/projects"
+        customClasses="grid place-content-center aspect-square bg-transparent hover:bg-transparent border-0 text-[currentColor]"
+      >
+        <i class="fa-solid fa-arrow-left"></i>
+      </app-default-button>
+      <h2 class="text-xl font-semibold">{{ project?.title }}</h2>
+    </div>
+    <div class="cover-wrapper rounded overflow-hidden mb-3">
+      <img
+        [src]="project?.background"
+        class="object-cover w-full object-center"
+        alt=""
+        srcset=""
+      />
+    </div>
+    <div class="project-links flex gap-3 mb-8" *ngIf="project && project.links">
+      <app-default-button
+        *ngIf="project.links.demo"
+        [externalLink]="project.links.demo"
+      >
+        <i class="fa-solid fa-arrow-up-right-from-square me-2"></i>
+        <span class="font-semibold">Demo</span>
+      </app-default-button>
+      <app-default-button
+        *ngIf="project.links.github"
+        [externalLink]="project.links.github"
+      >
+        <i class="fa-brands fa-github me-2"></i>
+        <span class="font-semibold">Github</span>
+      </app-default-button>
+    </div>
+    <div class="project-skills mb-16">
+      <p class="text-xl font-semibold mb-2">Desenvolvido com:</p>
+      <ul class="flex gap-2 text-xl">
+        <li
+          *ngFor="let item of project?.tags"
+          class="py-1 px-2 rounded bg-opacity-50 bg-zinc-500 flex items-center gap-2"
+        >
+          <i [class]="item.fontAwesomeIcon"></i>
+          <p class="text-xs font-semibold">
+            {{ item.title }}
+          </p>
+        </li>
+      </ul>
+    </div>
+
+    <p class="text-xl font-semibold mb-2">Projetos semelhantes:</p>
+    <div
+      class="similar-projects flex flex-nowrap gap-3 pb-3 overflow-auto"
+      *ngIf="similarProjects.length"
+    >
+      <project-block
+        class="min-w-64 max-h-32"
+        *ngFor="let project of similarProjects"
+        [project]="project"
+      ></project-block>
+    </div>
+  </div>
+</block>

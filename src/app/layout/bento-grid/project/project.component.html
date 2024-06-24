@@ -1,16 +1,6 @@
 <div
   class="content flex-grow flex flex-col gap-2 p-4 transition-all text-white"
-  [style]="
-    '
-    --_bg-color: rgb(39, 39, 42,.5);
-    background-image: url(' +
-    project?.background +
-    ');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  '
-  "
+  [style]="contentStyles"
 >
   <div class="content-header">
     <ng-content></ng-content>
@@ -21,7 +11,7 @@
   <div
     class="flex gap-2 flex-wrap mt-auto justify-end text-sm items-center font-semibold"
   >
-    <app-default-button>
+    <app-default-button [routerLink]="projectRoute">
       Ver detalhes
       <i class="ms-2 text-xs fa-solid fa-arrow-right"></i
     ></app-default-button>

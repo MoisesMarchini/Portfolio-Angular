@@ -1,4 +1,5 @@
 import { languages } from './languages';
+import { ProjectModel } from './projects';
 
 export const environment = {
   loaded: false,
@@ -36,5 +37,9 @@ export const environment = {
 
   get projects() {
     return this.languageData.projects;
+  },
+
+  getProjectRoute(project: ProjectModel) {
+    return project.title.toLowerCase().replaceAll(' ', '-');
   },
 };
