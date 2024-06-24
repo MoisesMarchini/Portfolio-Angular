@@ -11,7 +11,7 @@ export class BlockComponent {
   get blockColor() {
     return environment.darkMode
       ? 'bg-zinc-800 border-zinc-700 text-white '
-      : 'bg-white border-white text-zinc-900 ';
+      : 'bg-white border-0 text-zinc-900 ';
   }
 
   defaultClassNames =

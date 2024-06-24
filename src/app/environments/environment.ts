@@ -7,8 +7,7 @@ export const environment = {
   darkMode: true,
   language: 'pt-br' as 'pt-br' | 'en',
 
-  routeSelectors: ['home', 'projects', 'contact', 'contactEmail'],
-  routeNavSelectors: ['home', 'projects', 'contact'],
+  routePaths: ['/home', '/projects', '/contact'],
 
   boxMargin: [
     'max(10vmin, 5px)',
@@ -31,8 +30,8 @@ export const environment = {
     return languages[this.language];
   },
 
-  get sectionsTitle() {
-    return this.languageData.navTitles;
+  get routeTitles() {
+    return this.languageData.routeTitles;
   },
 
   get projects() {

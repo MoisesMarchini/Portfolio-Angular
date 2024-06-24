@@ -10,7 +10,6 @@ import { environment } from 'src/app/environments/environment';
 })
 export class ProjectComponent extends BlockComponent {
   @Input() project?: ProjectModel;
-  @Input() linkToProjetsPage: boolean = false;
 
   get darkMode() {
     return environment.darkMode;
@@ -25,9 +24,4 @@ export class ProjectComponent extends BlockComponent {
       this.project == undefined ? 'hidden' : ''
     }`;
   }
-
-  // @HostBinding('style') get styles() {
-  //   return `background-image: url(/assets/images/projects/green-thumb-cover.png);
-  //   background-size: cover; background-position: center`;
-  // }
 }

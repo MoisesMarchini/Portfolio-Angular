@@ -18,19 +18,12 @@
       {{ project?.title }}
     </h5>
   </div>
-  <div class="flex gap-2 flex-wrap mt-auto text-sm items-center font-semibold">
+  <div
+    class="flex gap-2 flex-wrap mt-auto justify-end text-sm items-center font-semibold"
+  >
     <app-default-button>
       Ver detalhes
       <i class="ms-2 text-xs fa-solid fa-arrow-right"></i
     ></app-default-button>
-    <app-default-button
-      *ngIf="linkToProjetsPage"
-      routerLink="projects"
-      customClasses="bg-transparent border-0 hover:bg-transparent opacity-50 hover:opacity-100"
-    >
-      Ir para projetos
-      <i class="ms-2 text-xs fa-solid fa-arrow-right"></i>
-    </app-default-button>
-    <a href="#" class="bg-transparent opacity-50 hover:opacity-100"> </a>
   </div>
 </div>

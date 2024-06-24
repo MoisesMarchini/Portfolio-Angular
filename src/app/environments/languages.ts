@@ -2,7 +2,7 @@ import { projects } from './projects';
 
 export const languages = {
   'pt-br': {
-    navTitles: ['Início', 'Projetos', 'Contato', 'Contato > Email'],
+    routeTitles: ['Início', 'Projetos', 'Contato'],
 
     words: {
       'your-name': 'Seu Nome',
@@ -15,7 +15,7 @@ export const languages = {
   },
 
   en: {
-    navTitles: ['Home', 'Projects', 'Contact', 'Contact > Email'],
+    routeTitles: ['Home', 'Projects', 'Contact'],
 
     words: {
       'your-name': 'Your Name',

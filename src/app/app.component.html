@@ -1,5 +1,13 @@
-<div [class]="'min-h-screen p-4 ' + (darkMode ? 'bg-zinc-900' : 'bg-zinc-200')">
-  <main class="container lg:max-w-[1024px] mx-auto" *ngIf="!loading">
+<div
+  [class]="
+    'min-h-screen p-4 ' +
+    (darkMode ? 'bg-zinc-900 text-white' : 'bg-zinc-200 tet-zinc-900')
+  "
+>
+  <main class="container lg:max-w-[1024px] mx-auto grid" *ngIf="!loading">
+    <app-logo color="currentColor" class="mx-auto my-3 w-10 block"></app-logo>
+    <app-navbar class="mb-3"></app-navbar>
     <router-outlet></router-outlet>
+    <app-footer class="mt-3"></app-footer>
   </main>
 </div>
