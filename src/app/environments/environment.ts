@@ -1,23 +1,14 @@
-import { languages } from "./languages";
+import { languages } from './languages';
 
 export const environment = {
   loaded: false,
   loadTimer: 2500,
   currentActiveSection: 0,
-  darkMode: false,
+  darkMode: true,
   language: 'pt-br' as 'pt-br' | 'en',
 
-  routeSelectors: [
-    'home',
-    'projects',
-    'contact',
-    'contactEmail',
-  ],
-  routeNavSelectors: [
-    'home',
-    'projects',
-    'contact',
-  ],
+  routeSelectors: ['home', 'projects', 'contact', 'contactEmail'],
+  routeNavSelectors: ['home', 'projects', 'contact'],
 
   boxMargin: [
     'max(10vmin, 5px)',
@@ -26,12 +17,7 @@ export const environment = {
     'max(15vmin, 10px)',
   ],
 
-  boxPadding: [
-    '64px',
-    '128px',
-    '128px',
-    '128px',
-  ],
+  boxPadding: ['64px', '128px', '128px', '128px'],
 
   socialMediaLinks: {
     linkedin: 'https://www.linkedin.com/in/moisesmarchinipereira/',
@@ -41,9 +27,15 @@ export const environment = {
     phone: 'https://api.whatsapp.com/send?phone=5521970632544',
   },
 
-  get languageData() { return languages[this.language] },
+  get languageData() {
+    return languages[this.language];
+  },
 
-  get sectionsTitle() { return this.languageData.navTitles },
+  get sectionsTitle() {
+    return this.languageData.navTitles;
+  },
 
-  get projects() { return this.languageData.projects },
-}
+  get projects() {
+    return this.languageData.projects;
+  },
+};

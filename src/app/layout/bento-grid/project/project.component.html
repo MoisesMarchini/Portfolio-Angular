@@ -1,0 +1,36 @@
+<div
+  class="content flex-grow flex flex-col gap-2 p-4 transition-all text-white"
+  [style]="
+    '
+    --_bg-color: rgb(39, 39, 42,.5);
+    background-image: url(' +
+    project?.background +
+    ');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  '
+  "
+>
+  <div class="content-header">
+    <ng-content></ng-content>
+    <h5 class="font-semibold text-xl mb-8">
+      {{ project?.title }}
+    </h5>
+  </div>
+  <div class="flex gap-2 flex-wrap mt-auto text-sm items-center font-semibold">
+    <app-default-button>
+      Ver detalhes
+      <i class="ms-2 text-xs fa-solid fa-arrow-right"></i
+    ></app-default-button>
+    <app-default-button
+      *ngIf="linkToProjetsPage"
+      routerLink="projects"
+      customClasses="bg-transparent border-0 hover:bg-transparent opacity-50 hover:opacity-100"
+    >
+      Ir para projetos
+      <i class="ms-2 text-xs fa-solid fa-arrow-right"></i>
+    </app-default-button>
+    <a href="#" class="bg-transparent opacity-50 hover:opacity-100"> </a>
+  </div>
+</div>

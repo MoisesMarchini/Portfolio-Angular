@@ -1,5 +1,5 @@
-<div class="min-h-screen bg-zinc-900 p-4">
-  <div class="container lg:max-w-[1024px] mx-auto">
-    <bento-grid></bento-grid>
-  </div>
+<div [class]="'min-h-screen p-4 ' + (darkMode ? 'bg-zinc-900' : 'bg-zinc-200')">
+  <main class="container lg:max-w-[1024px] mx-auto" *ngIf="!loading">
+    <router-outlet></router-outlet>
+  </main>
 </div>

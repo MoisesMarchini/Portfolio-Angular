@@ -1,4 +1,5 @@
 import { Component, AfterViewInit } from '@angular/core';
+import { DarkModeService } from './layout/bento-grid/dark-mode/dark-mode.service';
 import { environment } from './environments/environment';
 
 @Component({
@@ -8,11 +9,19 @@ import { environment } from './environments/environment';
 })
 export class AppComponent implements AfterViewInit {
   title = 'Moisés Marchini - Portfólio';
+  loading = false;
 
-  constructor() {}
-
-  darkMode() {
+  get darkMode() {
     return environment.darkMode;
+  }
+
+  constructor(private darkModeService: DarkModeService) {
+    darkModeService.darkMode$.subscribe((darkMode) => {
+      this.loading = true;
+      setTimeout(() => {
+        this.loading = false;
+      }, 10);
+    });
   }
 
   ngAfterViewInit(): void {}

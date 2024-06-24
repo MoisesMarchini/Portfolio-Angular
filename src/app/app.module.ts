@@ -6,20 +6,20 @@ import { ComponentsModule } from './shared/components/components.module';
 import { DirectivesModule } from './shared/directives/directives.module';
 import { AppRoutingModule } from './app-routing.module';
 import { PagesModule } from './pages/pages.module';
+import { BentoGridModule } from './layout/bento-grid/bento-grid.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-   ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
+    BentoGridModule,
     BrowserAnimationsModule,
     ComponentsModule,
     DirectivesModule,
     AppRoutingModule,
-    PagesModule
+    PagesModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

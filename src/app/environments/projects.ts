@@ -1,4 +1,32 @@
-export const projects = [
+export interface ProjectModel {
+  title: string;
+  tags: { title: string; fontAwesomeIcon: string }[];
+  links: { demo: string; github?: string };
+  background: string;
+  description: string;
+}
+
+export const projects: ProjectModel[] = [
+  {
+    title: 'Green Thumb',
+    tags: [
+      {
+        title: 'Angular',
+        fontAwesomeIcon: 'fa-brands fa-angular',
+      },
+      {
+        title: 'Sass',
+        fontAwesomeIcon: 'fa-brands fa-sass',
+      },
+    ],
+    links: {
+      demo: 'https://green-thumb-three.vercel.app/',
+      github:
+        'https://github.com/MoisesMarchini/Template-GreenThumb/tree/master',
+    },
+    background: '/assets/images/projects/green-thumb-cover.png',
+    description: '',
+  },
   {
     title: 'Clean Home',
     tags: [
@@ -37,26 +65,6 @@ export const projects = [
         'https://github.com/MoisesMarchini/Template-GreenThumb/tree/variants%2Fpetpal',
     },
     background: '/assets/images/projects/petpal-cover.png',
-    description: '',
-  },
-  {
-    title: 'Green Thumb',
-    tags: [
-      {
-        title: 'Angular',
-        fontAwesomeIcon: 'fa-brands fa-angular',
-      },
-      {
-        title: 'Sass',
-        fontAwesomeIcon: 'fa-brands fa-sass',
-      },
-    ],
-    links: {
-      demo: 'https://green-thumb-three.vercel.app/',
-      github:
-        'https://github.com/MoisesMarchini/Template-GreenThumb/tree/master',
-    },
-    background: '/assets/images/projects/green-thumb-cover.png',
     description: '',
   },
   {

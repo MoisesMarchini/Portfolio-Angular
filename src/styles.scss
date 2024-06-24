@@ -3,31 +3,4 @@
 @tailwind components;
 @tailwind utilities;
 
-// Define the maximum number of items
-$max-items: 10;
-$delay-step: 0.1s;
-
-block {
-  opacity: 0;
-  animation: show 0.3s forwards;
-  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.25);
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.25);
-
-  // Loop through and apply delays dynamically
-  @for $i from 1 through $max-items {
-    &:nth-child(#{$i}) {
-      animation-delay: $i * $delay-step;
-    }
-  }
-}
-
-@keyframes show {
-  0% {
-    opacity: 0;
-    scale: 0.5;
-  }
-  100% {
-    opacity: 1;
-    scale: 1;
-  }
-}
+@import "./app/shared/styles/bento-grid.scss";
