@@ -23,7 +23,7 @@
         [externalLink]="project.links.demo"
       >
         <i class="fa-solid fa-arrow-up-right-from-square me-2"></i>
-        <span class="font-semibold">Demo</span>
+        <span class="font-semibold">Abrir</span>
       </app-default-button>
       <app-default-button
         *ngIf="project.links.github"
@@ -53,11 +53,12 @@
       class="similar-projects flex flex-nowrap gap-3 pb-3 overflow-auto"
       *ngIf="similarProjects.length"
     >
-      <project-block
-        class="min-w-64 max-h-32"
-        *ngFor="let project of similarProjects"
-        [project]="project"
-      ></project-block>
+      <ng-container *ngFor="let project of similarProjects">
+        <project-block
+          class="min-w-64 max-h-32"
+          [project]="project"
+        ></project-block>
+      </ng-container>
     </div>
   </div>
 </block>

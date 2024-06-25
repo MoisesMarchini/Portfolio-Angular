@@ -25,13 +25,17 @@ export class ProjectDetailsComponent {
   }
 
   private loadProject() {
+    this.similarProjects = [];
+
     this.project = environment.projects.find((project) => {
       const projectRoute = environment.getProjectRoute(project);
 
       return projectRoute === this.projectName;
     });
 
-    this.similarProjects = this.loadSimilarProjects();
+    setTimeout(() => {
+      this.similarProjects = this.loadSimilarProjects();
+    });
   }
 
   private loadSimilarProjects() {

@@ -1,5 +1,5 @@
-<bento-grid>
-  <block class="col-span-12 md:col-span-6">
+<bento-grid class="grid-rows-5">
+  <block class="col-span-12 md:col-span-8 row-span-2">
     <div class="flex flex-col h-full">
       <div
         [class]="
@@ -21,7 +21,8 @@
         </p>
       </div>
       <app-default-button
-        customClasses="bg-transparent p-0 hover:bg-transparent border-0 hover:underline mt-8 text-green-400"
+        customClasses="bg-transparent font-semibold p-0 hover:bg-transparent border-0 hover:underline mt-8 text-green-400"
+        routerLink="/contact"
       >
         <span>
           Entrar em contato
@@ -30,10 +31,10 @@
       </app-default-button>
     </div>
   </block>
-  <socials></socials>
+  <socials class="row-span-2"></socials>
   <dark-mode-block></dark-mode-block>
   <block class="row-span-2"></block>
-  <project-block [project]="latestProject">
+  <project-block class="md:col-span-8" [project]="latestProject">
     <h3 class="opacity-50 font-semibold text-xs">Último Projeto</h3>
   </project-block>
   <block class="row-span-2"></block>

@@ -8,5 +8,5 @@ import { BlockComponent } from '../block/block.component';
 })
 export class SocialsComponent extends BlockComponent {
   override extendedClassNames: string =
-    'col-span-12 md:col-span-6 p-0 bg-transparent border-0';
+    'col-span-12 hover:scale-100 md:col-span-4 p-0 bg-transparent border-0';
 }
