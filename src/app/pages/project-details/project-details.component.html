@@ -1,4 +1,4 @@
-<block class="bg-transparent border-0 grid p-0 px-6">
+<div class="bento-grid-block border-0 grid p-0 px-6">
   <div class="body overflow-hidden">
     <div class="flex items-baseline gap-2 mb-3">
       <app-default-button
@@ -55,10 +55,10 @@
     >
       <ng-container *ngFor="let project of similarProjects">
         <project-block
-          class="min-w-64 max-h-32"
+          class="min-w-64 max-h-32 hover:scale-100"
           [project]="project"
         ></project-block>
       </ng-container>
     </div>
   </div>
-</block>
+</div>

@@ -11,9 +11,12 @@
   <div
     class="flex gap-2 flex-wrap mt-auto justify-end text-sm items-center font-semibold"
   >
-    <app-default-button [routerLink]="projectRoute">
+    <app-default-button
+      customClasses="bg-transparent border-0"
+      [routerLink]="projectRoute"
+    >
       Ver detalhes
-      <i class="ms-2 text-xs fa-solid fa-arrow-right"></i
+      <i class="ms-2 text-xs fa-solid fa-arrow-right -rotate-45"></i
     ></app-default-button>
   </div>
 </div>

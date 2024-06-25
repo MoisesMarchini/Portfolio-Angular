@@ -15,7 +15,7 @@ export class BlockComponent {
   }
 
   defaultClassNames =
-    'block hover:scale-105 hover:z-10 bento-grid-block col-span-6 md:col-span-2 border rounded-lg p-6 ' +
+    'block hover:scale-[1.025] hover:z-10 bento-grid-block col-span-6 md:col-span-2 border rounded-lg p-6 ' +
     this.blockColor;
   extendedClassNames = '';
   constructor(public elementRef: ElementRef) {}

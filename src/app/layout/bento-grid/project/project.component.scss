@@ -1,3 +1,20 @@
 .content {
   border-image: linear-gradient(var(--_bg-color), var(--_bg-color)) 1 fill;
+  animation: bgPosAnim 10s infinite linear alternate;
+  animation-play-state: paused;
+  &:hover {
+    animation-play-state: running;
+  }
+}
+
+@keyframes bgPosAnim {
+  0% {
+    background-position: 50% 50%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
 }

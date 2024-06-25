@@ -1,10 +1,14 @@
 <div
   [class]="
-    'min-h-screen p-4 ' +
-    (darkMode ? 'bg-zinc-900 text-white' : 'bg-zinc-200 tet-zinc-900')
+    'app-wrapper relative min-h-screen p-4 ' +
+    (darkMode ? 'bg-zinc-900 text-white' : 'bg-zinc-200 text-zinc-900')
   "
+  [style]="'--_radial-bg-color: ' + getRadialBgColor()"
 >
-  <main class="container lg:max-w-[1024px] mx-auto grid" *ngIf="!loading">
+  <main
+    class="container relative lg:max-w-[1024px] mx-auto grid z-10"
+    *ngIf="!loading"
+  >
     <app-logo color="currentColor" class="mx-auto my-3 w-10 block"></app-logo>
     <app-navbar class="mb-3"></app-navbar>
     <router-outlet></router-outlet>

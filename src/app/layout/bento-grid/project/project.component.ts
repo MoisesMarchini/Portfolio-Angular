@@ -41,7 +41,7 @@ export class ProjectComponent extends BlockComponent {
     return `--_bg-color: rgb(39, 39, 42,.5);
     background-image: url(${this.project?.background});
     background-size: cover;
-    background-position: center;
+    background-position: 50% 50%;
     background-repeat: no-repeat;`;
   }
 }
