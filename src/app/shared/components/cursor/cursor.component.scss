@@ -1,0 +1,11 @@
+.cursor {
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s linear;
+  position: fixed;
+  width: clamp(100px, 60vw, 600px);
+  aspect-ratio: 1;
+  top: var(--_top);
+  left: var(--_left);
+  background: radial-gradient(var(--_cursor-color) -50%, transparent 70%);
+}

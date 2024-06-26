@@ -6,10 +6,23 @@ import { DefaultButtonComponent } from './default-button/default-button.componen
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { LogoComponent } from './logo/logo.component';
+import { CursorComponent } from './cursor/cursor.component';
 
 @NgModule({
-  declarations: [DefaultButtonComponent, NavbarComponent, FooterComponent, LogoComponent],
-  exports: [DefaultButtonComponent, NavbarComponent, FooterComponent, LogoComponent],
+  declarations: [
+    DefaultButtonComponent,
+    NavbarComponent,
+    FooterComponent,
+    LogoComponent,
+    CursorComponent,
+  ],
+  exports: [
+    DefaultButtonComponent,
+    NavbarComponent,
+    FooterComponent,
+    LogoComponent,
+    CursorComponent,
+  ],
   imports: [CommonModule, DirectivesModule, RouterModule],
 })
 export class ComponentsModule {}

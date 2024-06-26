@@ -3,8 +3,10 @@
   [style]="contentStyles"
 >
   <div class="content-header">
-    <ng-content></ng-content>
-    <h5 class="font-semibold text-xl mb-8">
+    <div class="custom-content">
+      <ng-content></ng-content>
+    </div>
+    <h5 class="font-semibold text-xl mb-8 transition-all">
       {{ project?.title }}
     </h5>
   </div>

@@ -1,8 +1,8 @@
 <bento-grid
-  class="grid-rows-[1fr,1fr,1fr,1fr,1fr,1fr,1fr,1fr,1fr,1fr] md:grid-rows-[1fr,1fr,1fr,1fr,1fr]"
+  class="grid-rows-[1fr,1fr,1fr,1fr,1fr,1fr,1fr,1fr,1fr,1fr,1fr] md:grid-rows-[1fr,1fr,1fr,1fr,1fr]"
 >
   <block class="col-span-12 md:col-span-8 row-span-2">
-    <div class="flex flex-col h-full">
+    <div class="h-full p-6">
       <div
         [class]="
           'portrait-wrapper rounded-full w-12 h-12 mb-3 ' +
@@ -14,8 +14,8 @@
       <p class="text-2xl mb-3 font-semibold">Olá, meu nome é Moisés Marchini</p>
       <div class="text-sm flex-grow grid gap-2 place-content-start">
         <p>
-          Sou um desenvolvedor fullstack com experiência em Angular, Bootstrap,
-          TailwindCSS e .NET.
+          Sou um desenvolvedor fullstack desde 2022 com experiência em Angular,
+          Bootstrap, TailwindCSS e .NET.
         </p>
         <p class="text-zinc-500">
           Sou apaixonado por café, adoro passar o tempo jogando xadrez,
@@ -33,19 +33,30 @@
       </app-default-button>
     </div>
   </block>
-  <socials class="row-span-2"></socials>
+  <socials-block class="row-span-2"></socials-block>
   <dark-mode-block></dark-mode-block>
   <block class="row-span-2"></block>
   <project-block class="md:col-span-8" [project]="latestProject">
     <h3 class="opacity-50 font-semibold text-xs">Último Projeto</h3>
   </project-block>
   <block class="row-span-2"></block>
-  <block class="grid place-content-center">
-    <div class="grid gap-3 text-center">
+  <block class="col-span-12 md:col-span-4"></block>
+  <block class="grid place-content-center relative overflow-hidden border-0">
+    <span
+      class="absolute inset-0 opacity-[0.5]"
+      style="
+        background-image: url(/assets/images/blocks/maps.jpg);
+        background-size: cover;
+      "
+    ></span>
+    <div class="grid gap-3 text-center z-10">
       <i class="fa-solid fa-location-dot text-4xl"></i>
-      <p class="text-xs md:text-sm font-semibold">Rio de Janeiro</p>
+      <p class="text-sm md:text-base font-semibold">Rio de Janeiro</p>
     </div>
   </block>
-  <block class=""></block>
-  <block class=""></block>
+  <block class="grid place-content-center text-center gap-3">
+    <i class="fa-regular fa-file-pdf text-4xl"></i>
+    <span>Currículo</span>
+  </block>
+  <languages-block class="relative"></languages-block>
 </bento-grid>

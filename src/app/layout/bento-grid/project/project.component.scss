@@ -1,10 +1,27 @@
 .content {
-  border-image: linear-gradient(var(--_bg-color), var(--_bg-color)) 1 fill;
-  animation: bgPosAnim 10s infinite linear alternate;
+  border-image: linear-gradient(
+      rgba(var(--_bg-color), 1) -50%,
+      rgba(var(--_bg-color), 0.25)
+    )
+    1 fill;
+  animation: bgPosAnim 20s infinite ease-in-out alternate;
   animation-play-state: paused;
   &:hover {
     animation-play-state: running;
+    border-image: linear-gradient(
+        rgba(var(--_bg-color), 1) -50%,
+        rgba(var(--_bg-color), 0.25) 25%
+      )
+      1 fill;
+    .content-header h5 {
+      transform: scale(0.85);
+    }
   }
+}
+
+.content-header h5 {
+  transform-origin: top left;
+  transition-timing-function: linear !important;
 }
 
 @keyframes bgPosAnim {

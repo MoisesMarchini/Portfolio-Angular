@@ -1,4 +1,9 @@
-import { Component, ElementRef, HostBinding } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  HostBinding,
+  HostListener,
+} from '@angular/core';
 import { environment } from 'src/app/environments/environment';
 import { twMerge } from 'tailwind-merge';
 
@@ -15,9 +20,9 @@ export class BlockComponent {
   }
 
   defaultClassNames =
-    'block hover:scale-[1.025] hover:z-10 bento-grid-block col-span-6 md:col-span-2 border rounded-lg p-6 ' +
+    'block hover:scale-[1.025] hover:z-10 col-span-6 md:col-span-2 border rounded-lg ' +
     this.blockColor;
-  extendedClassNames = '';
+  extendedClassNames = 'bento-grid-block';
   constructor(public elementRef: ElementRef) {}
 
   @HostBinding('class') get classNames() {

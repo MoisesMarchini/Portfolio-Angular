@@ -1,10 +1,11 @@
 <div
   [class]="
     'app-wrapper relative min-h-screen p-4 ' +
-    (darkMode ? 'bg-zinc-900 text-white' : 'bg-zinc-200 text-zinc-900')
+    (darkMode ? 'bg-zinc-900 text-white' : 'bg-gray-200 text-zinc-900')
   "
   [style]="'--_radial-bg-color: ' + getRadialBgColor()"
 >
+  <app-cursor></app-cursor>
   <main
     class="container relative lg:max-w-[1024px] mx-auto grid z-10"
     *ngIf="!loading"

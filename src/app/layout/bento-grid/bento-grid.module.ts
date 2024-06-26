@@ -7,6 +7,7 @@ import { ProjectComponent } from './project/project.component';
 import { ComponentsModule } from 'src/app/shared/components/components.module';
 import { DarkModeComponent } from './dark-mode/dark-mode.component';
 import { FormsModule } from '@angular/forms';
+import { LanguagesComponent } from './languages/languages.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { FormsModule } from '@angular/forms';
     SocialsComponent,
     ProjectComponent,
     DarkModeComponent,
+    LanguagesComponent,
   ],
   imports: [CommonModule, ComponentsModule, FormsModule],
   exports: [
@@ -23,6 +25,7 @@ import { FormsModule } from '@angular/forms';
     SocialsComponent,
     ProjectComponent,
     DarkModeComponent,
+    LanguagesComponent,
   ],
 })
 export class BentoGridModule {}
