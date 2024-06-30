@@ -1,7 +1,7 @@
 <ul class="flex gap-8 justify-center py-3">
   <li *ngFor="let navLink of navLinks">
     <a
-      class="nav-link transition-all font-semibold"
+      class="nav-link relative transition-all font-semibold"
       [routerLinkActive]="'active'"
       [routerLink]="navLink.path"
     >

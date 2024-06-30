@@ -1,5 +1,5 @@
 import { Component, AfterViewInit } from '@angular/core';
-import { DarkModeService } from './layout/bento-grid/dark-mode/dark-mode.service';
+import { DarkModeService } from './layout/bento-grid/dark-mode-block/dark-mode.service';
 import { environment } from './environments/environment';
 
 @Component({
@@ -32,7 +32,7 @@ export class AppComponent implements AfterViewInit {
       this.loading = true;
       setTimeout(() => {
         this.loading = false;
-      }, 10);
+      });
     });
   }
 
@@ -42,7 +42,7 @@ export class AppComponent implements AfterViewInit {
     const rng = Math.round(Math.random() * 10);
     const bgColor = 0; //rng % this.radialBgColors.length;
 
-    const darkModeColor = this.radialBgColors[bgColor];
+    const darkModeColor = 'rgb(63 63 70)'; //this.radialBgColors[bgColor];
     const lightModeColor = '#ffffff';
 
     return this.darkMode ? darkModeColor : lightModeColor;

@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LanguagesComponent } from './languages.component';
+import { LanguagesBlockComponent } from './languages.component';
 
 describe('LanguagesComponent', () => {
-  let component: LanguagesComponent;
-  let fixture: ComponentFixture<LanguagesComponent>;
+  let component: LanguagesBlockComponent;
+  let fixture: ComponentFixture<LanguagesBlockComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [LanguagesComponent]
+      declarations: [LanguagesBlockComponent],
     });
-    fixture = TestBed.createComponent(LanguagesComponent);
+    fixture = TestBed.createComponent(LanguagesBlockComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

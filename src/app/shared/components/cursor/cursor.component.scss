@@ -8,4 +8,37 @@
   top: var(--_top);
   left: var(--_left);
   background: radial-gradient(var(--_cursor-color) -50%, transparent 70%);
+  animation: randomizeTransform 12s linear infinite;
+  &.cursor-front {
+    display: none;
+  }
+}
+
+@keyframes randomizeTransform {
+  0%,
+  100% {
+    transform: translate(-50%, -50%);
+    scale: 1.05;
+    opacity: 0.8;
+  }
+  20% {
+    transform: translate(-52%, -48%);
+    scale: 1;
+    opacity: 1;
+  }
+  40% {
+    transform: translate(-48%, -52%);
+    scale: 0.95;
+    opacity: 0.6;
+  }
+  60% {
+    transform: translate(-52%, -48%);
+    scale: 1;
+    opacity: 0.8;
+  }
+  80% {
+    transform: translate(-48%, -52%);
+    scale: 0.95;
+    opacity: 1;
+  }
 }

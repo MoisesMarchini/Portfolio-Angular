@@ -8,7 +8,7 @@ import { environment } from 'src/app/environments/environment';
   templateUrl: './project.component.html',
   styleUrls: ['./project.component.scss'],
 })
-export class ProjectComponent extends BlockComponent {
+export class ProjectBlockComponent extends BlockComponent {
   @Input() project?: ProjectModel;
 
   contentStyles = '';

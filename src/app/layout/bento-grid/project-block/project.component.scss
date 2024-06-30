@@ -19,9 +19,12 @@
   }
 }
 
-.content-header h5 {
-  transform-origin: top left;
-  transition-timing-function: linear !important;
+.content-header {
+  text-shadow: 0 0 20px black;
+  h5 {
+    transform-origin: top left;
+    transition-timing-function: linear !important;
+  }
 }
 
 @keyframes bgPosAnim {

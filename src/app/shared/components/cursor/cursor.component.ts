@@ -58,8 +58,8 @@ export class CursorComponent {
     const deltaX = this.targetX - this.mouseX;
     const deltaY = this.targetY - this.mouseY;
 
-    this.mouseX += deltaX * 0.1;
-    this.mouseY += deltaY * 0.1;
+    this.mouseX += deltaX * 0.05;
+    this.mouseY += deltaY * 0.05;
 
     this.animationFrameId = requestAnimationFrame(() => this.animateFollower());
   }

@@ -7,7 +7,7 @@ import { DarkModeService } from './dark-mode.service';
   templateUrl: './dark-mode.component.html',
   styleUrls: ['./dark-mode.component.scss'],
 })
-export class DarkModeComponent extends BlockComponent {
+export class DarkModeBlockComponent extends BlockComponent {
   darkMode = this.darkModeService.darkModeSubject.value;
 
   constructor(

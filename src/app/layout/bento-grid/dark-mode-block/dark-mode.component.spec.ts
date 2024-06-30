@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DarkModeComponent } from './dark-mode.component';
+import { DarkModeBlockComponent } from './dark-mode.component';
 
 describe('DarkModeComponent', () => {
-  let component: DarkModeComponent;
-  let fixture: ComponentFixture<DarkModeComponent>;
+  let component: DarkModeBlockComponent;
+  let fixture: ComponentFixture<DarkModeBlockComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [DarkModeComponent]
+      declarations: [DarkModeBlockComponent],
     });
-    fixture = TestBed.createComponent(DarkModeComponent);
+    fixture = TestBed.createComponent(DarkModeBlockComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

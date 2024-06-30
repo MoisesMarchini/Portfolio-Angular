@@ -6,4 +6,4 @@ import { BlockComponent } from '../block/block.component';
   templateUrl: './languages.component.html',
   styleUrls: ['./languages.component.scss'],
 })
-export class LanguagesComponent extends BlockComponent {}
+export class LanguagesBlockComponent extends BlockComponent {}

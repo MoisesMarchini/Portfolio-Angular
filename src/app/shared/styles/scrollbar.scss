@@ -1,0 +1,21 @@
+:root {
+  --scrollbar-bg: #27272ad9;
+}
+
+/* Adicione isso no seu arquivo CSS principal */
+::-webkit-scrollbar {
+  width: 12px; /* Largura da scrollbar */
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-bg); /* Cor do fundo da barra de rolagem */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e5e5e5; /* Cor da barra de rolagem */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b2b2b2; /* Cor da barra de rolagem ao passar o mouse */
+}

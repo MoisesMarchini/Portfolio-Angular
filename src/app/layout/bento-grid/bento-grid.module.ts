@@ -2,30 +2,30 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BentoGridComponent } from './bento-grid.component';
 import { BlockComponent } from './block/block.component';
-import { SocialsComponent } from './socials/socials.component';
-import { ProjectComponent } from './project/project.component';
 import { ComponentsModule } from 'src/app/shared/components/components.module';
-import { DarkModeComponent } from './dark-mode/dark-mode.component';
+import { DarkModeBlockComponent } from './dark-mode-block/dark-mode.component';
 import { FormsModule } from '@angular/forms';
-import { LanguagesComponent } from './languages/languages.component';
+import { SocialBlockComponent } from './social-block/social-block.component';
+import { LanguagesBlockComponent } from './languages-block/languages.component';
+import { ProjectBlockComponent } from './project-block/project.component';
 
 @NgModule({
   declarations: [
     BentoGridComponent,
     BlockComponent,
-    SocialsComponent,
-    ProjectComponent,
-    DarkModeComponent,
-    LanguagesComponent,
+    ProjectBlockComponent,
+    DarkModeBlockComponent,
+    LanguagesBlockComponent,
+    SocialBlockComponent,
   ],
   imports: [CommonModule, ComponentsModule, FormsModule],
   exports: [
     BentoGridComponent,
     BlockComponent,
-    SocialsComponent,
-    ProjectComponent,
-    DarkModeComponent,
-    LanguagesComponent,
+    ProjectBlockComponent,
+    DarkModeBlockComponent,
+    LanguagesBlockComponent,
+    SocialBlockComponent,
   ],
 })
 export class BentoGridModule {}

@@ -1,15 +1,9 @@
-import {
-  Component,
-  ElementRef,
-  HostBinding,
-  HostListener,
-} from '@angular/core';
+import { Component, ElementRef, HostBinding } from '@angular/core';
 import { environment } from 'src/app/environments/environment';
 import { twMerge } from 'tailwind-merge';
 
 @Component({
   selector: 'block',
-  styleUrls: ['./block.component.scss'],
   template: `<ng-content></ng-content>`,
 })
 export class BlockComponent {
