@@ -1,8 +1,18 @@
-<header class="flex items-center w-full gap-4">
-  <app-logo color="currentColor" class="w-8 block me-auto"></app-logo>
+<header class="flex flex-wrap items-center w-full gap-4">
+  <app-logo color="currentColor" class="h-8 block me-auto"></app-logo>
+  <button
+    (click)="darkModeService.setDarkMode()"
+    class="transition-all sm:order-1 hover:brightness-75 dark:hover:brightness-125 default-container p-0 w-9 aspect-square grid place-content-center rounded-full text-sm"
+  >
+    <i
+      class="fa-solid"
+      [class.fa-sun]="!darkMode"
+      [class.fa-moon]="darkMode"
+    ></i>
+  </button>
   <nav
     default-container
-    class="p-0 rounded-full text-sm font-medium px-2 hidden md:block"
+    class="p-0 rounded-full text-sm font-medium px-2 max-sm:mx-auto max-sm:w-full"
   >
     <ul class="flex justify-center">
       <li *ngFor="let navLink of navLinks; let first = first; let last = last">
@@ -19,14 +29,4 @@
       </li>
     </ul>
   </nav>
-  <button
-    (click)="darkModeService.setDarkMode()"
-    class="transition-all hover:brightness-75 dark:hover:brightness-125 default-container p-0 w-9 aspect-square grid place-content-center rounded-full text-sm"
-  >
-    <i
-      class="fa-solid"
-      [class.fa-sun]="!darkMode"
-      [class.fa-moon]="darkMode"
-    ></i>
-  </button>
 </header>
