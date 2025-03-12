@@ -11,7 +11,7 @@ export class HomeComponent {
   socialMediaLinks = environment.socialMediaLinks;
   sectionHeaderModel: SectionHeaderModel = {
     title: 'Desenvolvedor Fullstack, amante de café e xadrez',
-    description: 'Meu nome é Moisés, sou especialista em Angular e .NET, mas minha jornada começou com o desenvolvimento de jogos em 2016. Nas horas vagas asssito animes, jogo xadrez e tenho boas conversas sobre viagem no tempo.'
+    description: 'Meu nome é Moisés, sou especialista em Angular e .NET, mas minha jornada começou com o desenvolvimento de jogos em 2016. Nas horas vagas assisto animes, jogo xadrez e tenho boas conversas sobre viagem no tempo.'
   }
 
   get darkMode() {
