@@ -8,6 +8,7 @@ import { SectionHeaderModel } from 'src/app/shared/components/section-header/sec
 })
 export class HomeComponent {
   latestProjects = environment.projects.lastestProjects;
+  socialMediaLinks = environment.socialMediaLinks;
   sectionHeaderModel: SectionHeaderModel = {
     title: 'Desenvolvedor Fullstack, amante de café e xadrez',
     description: 'Meu nome é Moisés, sou especialista em Angular e .NET, mas minha jornada começou com o desenvolvimento de jogos em 2016. Nas horas vagas, gosto de animes, jogar xadrez e boas conversas sobre viagem no tempo.'

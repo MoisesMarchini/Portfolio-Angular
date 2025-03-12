@@ -7,10 +7,14 @@
     >
       {{ model?.title }}
     </h2>
+    <ng-content select="[after-title]"></ng-content>
   </div>
-  <p
-    *ngIf="model?.description"
-    class="mt-6 text-base text-zinc-600 dark:text-zinc-400 h-1/2"
-    [innerHTML]="model?.description"
-  ></p>
+  <div class="title-container h-1/2">
+    <p
+      *ngIf="model?.description"
+      class="mt-6 text-base text-zinc-600 dark:text-zinc-400"
+      [innerHTML]="model?.description"
+    ></p>
+    <ng-content select="[after-description]"></ng-content>
+  </div>
 </div>

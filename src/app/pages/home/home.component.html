@@ -1,4 +1,31 @@
-<section-header [model]="sectionHeaderModel"></section-header>
+<section-header [model]="sectionHeaderModel">
+  <ul after-description class="flex gap-6 mt-6">
+    <li>
+      <a
+        class="rounded-full grid place-content-center text-xl hover:text-teal-400 transition w-8 aspect-square"
+        [href]="socialMediaLinks.itchIo"
+      >
+        <i class="fa-brands fa-itch-io"></i>
+      </a>
+    </li>
+    <li>
+      <a
+        class="rounded-full grid place-content-center text-xl hover:text-teal-400 transition w-8 aspect-square"
+        [href]="socialMediaLinks.github"
+      >
+        <i class="fa-brands fa-github"></i>
+      </a>
+    </li>
+    <li>
+      <a
+        class="rounded-full grid place-content-center text-xl hover:text-teal-400 transition w-8 aspect-square"
+        [href]="socialMediaLinks.linkedin"
+      >
+        <i class="fa-brands fa-linkedin-in"></i>
+      </a>
+    </li>
+  </ul>
+</section-header>
 <project-card-group
   [projects]="latestProjects"
   groupIcon="laptop"
