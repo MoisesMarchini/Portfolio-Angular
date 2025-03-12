@@ -28,12 +28,6 @@ export class AppComponent implements AfterViewInit {
   }
 
   constructor(private darkModeService: DarkModeService) {
-    darkModeService.darkMode$.subscribe((darkMode) => {
-      this.loading = true;
-      setTimeout(() => {
-        this.loading = false;
-      });
-    });
   }
 
   ngAfterViewInit(): void {}

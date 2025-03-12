@@ -7,14 +7,13 @@ import { SectionHeaderModel } from 'src/app/shared/components/section-header/sec
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
-  latestProject = environment.projects[0];
-
-  get darkMode() {
-    return environment.darkMode;
-  }
-
+  latestProjects = environment.projects.lastestProjects;
   sectionHeaderModel: SectionHeaderModel = {
     title: 'Desenvolvedor Fullstack, amante de café e xadrez',
     description: 'Meu nome é Moisés, sou especialista em Angular e .NET, mas minha jornada começou com o desenvolvimento de jogos em 2016. Nas horas vagas, gosto de xadrez, animes e boas conversas sobre viagem no tempo.'
+  }
+
+  get darkMode() {
+    return environment.darkMode;
   }
 }

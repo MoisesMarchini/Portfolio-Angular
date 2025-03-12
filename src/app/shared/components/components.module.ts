@@ -9,6 +9,8 @@ import { LogoComponent } from './logo/logo.component';
 import { CursorComponent } from './cursor/cursor.component';
 import { DefaultContainerComponent } from './default-container/default-container.component';
 import { SectionHeaderComponent } from './section-header/section-header.component';
+import { ProjectCardComponent } from './project-card/project-card.component';
+import { ProjectCardGroupComponent } from './project-card-group/project-card-group.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { SectionHeaderComponent } from './section-header/section-header.componen
     CursorComponent,
     DefaultContainerComponent,
     SectionHeaderComponent,
+    ProjectCardComponent,
+    ProjectCardGroupComponent,
   ],
   exports: [
     DefaultButtonComponent,
@@ -28,6 +32,8 @@ import { SectionHeaderComponent } from './section-header/section-header.componen
     CursorComponent,
     DefaultContainerComponent,
     SectionHeaderComponent,
+    ProjectCardComponent,
+    ProjectCardGroupComponent,
   ],
   imports: [CommonModule, DirectivesModule, RouterModule],
 })

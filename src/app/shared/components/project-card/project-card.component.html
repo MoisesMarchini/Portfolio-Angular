@@ -1,0 +1,42 @@
+<a
+  class="w-full relative min-h-full flex flex-col"
+  [href]="model.links.demo"
+  target="_blank"
+>
+  <default-container
+    class="absolute inset-0 duration-300 transition-all"
+    [class.scale-90]="!isHovering"
+    [class.scale-100]="isHovering"
+    [class.opacity-0]="!isHovering"
+    [class.opacity-100]="isHovering"
+  ></default-container>
+  <div class="project-content p-4 relative z-0 flex-1 flex flex-col">
+    <div class="content flex-1">
+      <div
+        class="w-12 mb-8 default-container rounded-full aspect-square grid place-content-center overflow-hidden p-2"
+      >
+        <img
+          [src]="model.favicon"
+          class="rounded-full overflow-hidden aspect-square w-full grid place-content-center"
+          alt=""
+          srcset=""
+        />
+      </div>
+      <h3 class="font-medium mb-6">
+        {{ model.title }}
+      </h3>
+      <p class="my-6 text-sm text-zinc-600 dark:text-zinc-400">
+        {{ model.description }}
+      </p>
+    </div>
+    <a
+      [href]="model.links.demo"
+      target="_blank"
+      class="text-sm font-medium transition text-zinc-600 dark:text-zinc-400 mt-auto"
+      [class.!text-teal-400]="isHovering"
+    >
+      <i class="fa-solid fa-link me-2"></i>
+      <span> Abrir em nova guia </span>
+    </a>
+  </div>
+</a>

@@ -4,11 +4,12 @@ export interface ProjectModel {
   links: { demo: string; github?: string };
   background: string;
   description: string;
+  favicon: string;
 }
 
-export const projects: ProjectModel[] = [
+export const freelancerProjects: ProjectModel[] = [
   {
-    title: 'Green Thumb',
+    title: 'CorreFox',
     tags: [
       {
         title: 'Angular',
@@ -20,15 +21,15 @@ export const projects: ProjectModel[] = [
       },
     ],
     links: {
-      demo: 'https://green-thumb-three.vercel.app/',
-      github:
-        'https://github.com/MoisesMarchini/Template-GreenThumb/tree/master',
+      demo: 'https://corre-fox.vercel.app/',
+      github: ''
     },
-    background: '/assets/images/projects/green-thumb-cover.png',
-    description: '',
+    background: '',
+    description: 'Landing page sobre assessoria especializada em corrida e TAF militar.',
+    favicon: 'https://corre-fox.vercel.app/run-or-die.jpeg'
   },
   {
-    title: 'Clean Home',
+    title: 'PsicoFácil',
     tags: [
       {
         title: 'Angular',
@@ -40,15 +41,16 @@ export const projects: ProjectModel[] = [
       },
     ],
     links: {
-      demo: 'https://green-thumb-git-variants-clean-home-moisesmarchinis-projects.vercel.app/',
-      github:
-        'https://github.com/MoisesMarchini/Template-GreenThumb/tree/variants%2Fclean-home',
+      demo: 'https://www.psicofacil.com.br/',
+      github: ''
+        //'https://github.com/MoisesMarchini/Template-GreenThumb/tree/master',
     },
-    background: '/assets/images/projects/clean-home-cover.png',
-    description: '',
+    background: '',
+    description: 'Plataforma de atendimentos online e gestão de prontuários psicológicos.',
+    favicon: 'https://www.psicofacil.com.br/favicon.svg'
   },
   {
-    title: 'PetPal',
+    title: 'RoofersNearMe',
     tags: [
       {
         title: 'Angular',
@@ -60,12 +62,13 @@ export const projects: ProjectModel[] = [
       },
     ],
     links: {
-      demo: 'https://green-thumb-git-variants-petpal-moisesmarchinis-projects.vercel.app/',
-      github:
-        'https://github.com/MoisesMarchini/Template-GreenThumb/tree/variants%2Fpetpal',
+      demo: 'https://roofersnearme.mn/',
+      github: ''
+        //'https://github.com/MoisesMarchini/Template-GreenThumb/tree/master',
     },
-    background: '/assets/images/projects/petpal-cover.png',
-    description: '',
+    background: '',
+    description: 'Plataforma conectando clientes a profissionais de telhado locais.',
+    favicon: 'https://roofersnearme.mn/favicon.ico'
   },
   {
     title: 'Fresh Cleaning Team',
@@ -81,12 +84,15 @@ export const projects: ProjectModel[] = [
     ],
     links: {
       demo: 'https://freshcleaningteam.com/',
+      github: ''
+        //'https://github.com/MoisesMarchini/Template-GreenThumb/tree/master',
     },
-    background: '/assets/images/projects/freshcleaningteam-cover.png',
-    description: '',
+    background: '',
+    description: 'Serviços personalizados de limpeza residencial e comercial.',
+    favicon: 'https://freshcleaningteam.com/favicon.ico'
   },
   {
-    title: 'Fernandex Portfolio',
+    title: 'Portfólio: Fernando Alexei',
     tags: [
       {
         title: 'Angular',
@@ -99,58 +105,49 @@ export const projects: ProjectModel[] = [
     ],
     links: {
       demo: 'https://fernandex.tech/',
+      github: ''
+        //'https://github.com/MoisesMarchini/Template-GreenThumb/tree/master',
     },
-    background: '/assets/images/projects/fernandex-cover.png',
-    description: '',
+    background: '',
+    description: 'Portfólio pessoal de Product Manager, exibindo projetos e habilidades.',
+    favicon: 'https://fernandex.tech/favicon.svg'
   },
+];
+export const gamesProjects: ProjectModel[] = [
   {
-    title: 'Medical Victory',
+    title: 'Tiny Despair',
     tags: [
       {
-        title: 'Figma',
-        fontAwesomeIcon: 'fa-brands fa-figma',
-      },
-      {
-        title: 'Angular',
-        fontAwesomeIcon: 'fa-brands fa-angular',
-      },
-      {
-        title: 'Sass',
-        fontAwesomeIcon: 'fa-brands fa-sass',
+        title: 'Unity',
+        fontAwesomeIcon: 'fa-brands fa-unity',
       },
     ],
     links: {
-      demo: 'https://mmp-medical-victory.vercel.app/',
-      github: 'https://github.com/MoisesMarchini/LandingPage-MedicalVictory',
+      demo: 'https://moisesmp.itch.io/tiny-despair',
     },
-    background: '/assets/images/projects/MedicalVictory-cover.png',
-    description: '',
+    background: '/assets/images/projects/tinydespair-cover.png',
+    description: 'Dungeon crawler roguelite com geração procedural, onde você deve derrotar inimigos e coletar itens.',
+    favicon: 'https://img.itch.zone/aW1nLzEwMTMzMzUzLnBuZw==/32x32%23/EnqiPe.png'
   },
   {
-    title: 'EJAM',
+    title: 'Super NiceBoy',
     tags: [
       {
-        title: 'Figma',
-        fontAwesomeIcon: 'fa-brands fa-figma',
-      },
-      {
-        title: 'Angular',
-        fontAwesomeIcon: 'fa-brands fa-angular',
-      },
-      {
-        title: 'Sass',
-        fontAwesomeIcon: 'fa-brands fa-sass',
+        title: 'Unity',
+        fontAwesomeIcon: 'fa-brands fa-unity',
       },
     ],
     links: {
-      demo: 'https://ejam-angular.vercel.app/',
-      github: 'https://github.com/MoisesMarchini/Ejam-Angular',
+      demo: 'https://moisesmp.itch.io/superniceboy',
     },
-    background: '/assets/images/projects/ejam-cover.png',
-    description: '',
+    background: '/assets/images/projects/superniceboy-cover.png',
+    description: 'Jogo troll desafiador, ensinando a ser um "Nice Guy", com o objetivo de alcançar a bandeira.',
+    favicon: 'https://img.itch.zone/aW1nLzE1OTg5MzkucG5n/32x32%23/vPFkCk.png'
   },
+];
+export const studyProjects: ProjectModel[] = [
   {
-    title: 'TaskMaster',
+    title: 'EconoMZ',
     tags: [
       {
         title: 'Angular',
@@ -160,33 +157,39 @@ export const projects: ProjectModel[] = [
         title: 'Sass',
         fontAwesomeIcon: 'fa-brands fa-sass',
       },
+      {
+        title: 'Firebase',
+        fontAwesomeIcon: 'fa-brands fa-angular',
+      },
     ],
     links: {
-      demo: 'https://mmp-taskmaster.vercel.app/',
+      demo: 'https://econo-mz.vercel.app/',
       github: 'https://github.com/MoisesMarchini/TaskMaster',
     },
-    background: '/assets/images/projects/taskmaster-cover.png',
-    description: '',
+    background: '',
+    description: 'WebApp de controle de gastos utilizando os serviços do Firebase para armazenamento e autenticação.',
+    favicon: 'https://econo-mz.vercel.app/favicon.ico'
   },
-  {
-    title: 'FurryHaven',
-    tags: [
-      {
-        title: 'Angular',
-        fontAwesomeIcon: 'fa-brands fa-angular',
+    {
+      title: 'TaskMaster',
+      tags: [
+        {
+          title: 'Angular',
+          fontAwesomeIcon: 'fa-brands fa-angular',
+        },
+        {
+          title: 'Sass',
+          fontAwesomeIcon: 'fa-brands fa-sass',
+        },
+      ],
+      links: {
+        demo: 'https://mmp-taskmaster.vercel.app/',
+        github: 'https://github.com/MoisesMarchini/TaskMaster',
       },
-      {
-        title: 'Sass',
-        fontAwesomeIcon: 'fa-brands fa-sass',
-      },
-    ],
-    links: {
-      demo: 'https://mmp-furryhaven.vercel.app/',
-      github: 'https://github.com/MoisesMarchini/LandingPage-FurryHaven',
+      background: '/assets/images/projects/taskmaster-cover.png',
+      description: 'ToDo WebApp inspirado em Kanban, com gerenciamento de tarefas de forma prática e visual.',
+    favicon: 'https://mmp-taskmaster.vercel.app/assets/logo/logo-bg-blue.svg'
     },
-    background: '/assets/images/projects/furryhaven-cover.png',
-    description: '',
-  },
   {
     title: 'Pokedex',
     tags: [
@@ -204,34 +207,15 @@ export const projects: ProjectModel[] = [
       github: 'https://github.com/MoisesMarchini/Pokedex',
     },
     background: '/assets/images/projects/pokedex-cover.png',
-    description: '',
-  },
-  {
-    title: 'Tiny Despair',
-    tags: [
-      {
-        title: 'Unity',
-        fontAwesomeIcon: 'fa-brands fa-unity',
-      },
-    ],
-    links: {
-      demo: 'https://moisesmp.itch.io/tiny-despair',
-    },
-    background: '/assets/images/projects/tinydespair-cover.png',
-    description: '',
-  },
-  {
-    title: 'Super NiceBoy',
-    tags: [
-      {
-        title: 'Unity',
-        fontAwesomeIcon: 'fa-brands fa-unity',
-      },
-    ],
-    links: {
-      demo: 'https://moisesmp.itch.io/superniceboy',
-    },
-    background: '/assets/images/projects/superniceboy-cover.png',
-    description: '',
+    description: 'WebApp de consulta de Pokémon, exibindo informações detalhadas sobre cada criatura.',
+    favicon: 'https://mmp-pokedex.vercel.app/favicon.ico'
   },
 ];
+
+export const projects = {
+  paid: freelancerProjects,
+  games: gamesProjects,
+  study: studyProjects,
+  lastestProjects: [studyProjects[0], freelancerProjects[0], freelancerProjects[1]],
+  all: [...freelancerProjects, ...gamesProjects, ...studyProjects]
+}
