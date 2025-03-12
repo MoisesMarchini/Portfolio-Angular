@@ -3,4 +3,20 @@
   [projects]="latestProjects"
   groupIcon="laptop"
   groupName="Últimos Projetos"
-></project-card-group>
+>
+  <div inside-group-name class="ms-auto hidden sm:block">
+    <ng-template [ngTemplateOutlet]="content"></ng-template>
+  </div>
+  <div after-group-projects class="flex justify-center mt-6 sm:hidden">
+    <ng-template [ngTemplateOutlet]="content"></ng-template>
+  </div>
+</project-card-group>
+
+<ng-template #content>
+  <a
+    routerLink="/projects"
+    class="hover:text-teal-400 hover:opacity-100 opacity-50 text-sm px-4 py-2 transition"
+  >
+    <i class="fa-solid fa-arrow-up me-2 rotate-45"></i> Ver todos os projetos
+  </a>
+</ng-template>

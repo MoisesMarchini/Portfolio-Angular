@@ -1,13 +1,16 @@
-<h2 class="font-medium mb-8 flex gap-6 items-center ms-4" *ngIf="groupName">
+<h2 class="font-medium mb-8 flex gap-6 items-center" *ngIf="groupName">
   <span
     class="default-container !text-white w-12 grid place-content-center text-xl p-0 aspect-square rounded-full bg-teal-400 dark:bg-teal-600"
     ><i class="fas fa-{{ groupIcon }}"></i
   ></span>
   <span class="text-2xl sm:text-3xl"> {{ groupName }} </span>
+  <ng-content select="[inside-group-name]"></ng-content>
 </h2>
+<ng-content select="[after-group-name]"></ng-content>
 <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
   <project-card
     *ngFor="let project of projects"
     [model]="project"
   ></project-card>
 </div>
+<ng-content select="[after-group-projects]"></ng-content>

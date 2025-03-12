@@ -1,15 +1,16 @@
 <div
-  class="section-header-container grid place-content-center min-h-[70vh] max-w-xl"
+  class="section-header-container flex flex-col justify-center h-[70vh] max-h-[520px] max-w-xl"
 >
-  <h2
-    class="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100"
-  >
-    {{ model?.title }}
-  </h2>
+  <div class="title-container h-1/2 flex flex-col justify-end">
+    <h2
+      class="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100"
+    >
+      {{ model?.title }}
+    </h2>
+  </div>
   <p
     *ngIf="model?.description"
-    class="mt-6 text-base text-zinc-600 dark:text-zinc-400"
-  >
-    {{ model?.description }}
-  </p>
+    class="mt-6 text-base text-zinc-600 dark:text-zinc-400 h-1/2"
+    [innerHTML]="model?.description"
+  ></p>
 </div>

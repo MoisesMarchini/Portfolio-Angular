@@ -32,6 +32,14 @@ import { twMerge } from 'tailwind-merge';
         <ng-template [ngTemplateOutlet]="content"></ng-template>
       </a>
     </ng-container>
+    <ng-container *ngIf="!externalLink && !routerLink">
+      <button
+        (click)="_onClick()"
+        [class]="classes"
+      >
+        <ng-template [ngTemplateOutlet]="content"></ng-template>
+      </button>
+    </ng-container>
 
     <ng-template #content>
       <ng-content></ng-content>
@@ -46,7 +54,7 @@ export class DefaultButtonComponent {
   @Output() onClick = new EventEmitter<any>();
   get classes() {
     return twMerge(
-      'rounded-full flex flex-nowrap place-items-baseline transition-colors cursor-pointer bg-green-700 border-green-500 border text-zinc-50 px-3 py-1 hover:bg-green-500',
+      'rounded-full flex flex-nowrap place-items-baseline transition-colors cursor-pointer bg-teal-400 dark:bg-teal-700 border-teal-500 border text-white font-medium px-4 py-2 hover:bg-teal-500',
       this.customClasses
     );
   }

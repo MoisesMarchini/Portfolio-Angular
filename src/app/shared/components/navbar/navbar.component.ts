@@ -9,8 +9,10 @@ import { DarkModeService } from '../../services/darkmode.service';
 })
 export class NavbarComponent {
   navLinks: { path: string; title: string }[] = [];
+  darkMode = false;
 
   constructor(public darkModeService: DarkModeService) {
+    darkModeService.darkMode$.subscribe(_darkMode => this.darkMode = _darkMode)
   }
 
   ngOnInit() {

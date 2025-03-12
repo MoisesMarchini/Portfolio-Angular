@@ -1,5 +1,5 @@
 <header class="flex items-center w-full gap-4">
-  <app-logo color="currentColor" class="w-8 lg:w-10 block me-auto"></app-logo>
+  <app-logo color="currentColor" class="w-8 block me-auto"></app-logo>
   <nav
     default-container
     class="p-0 rounded-full text-sm font-medium px-2 hidden md:block"
@@ -23,6 +23,10 @@
     (click)="darkModeService.setDarkMode()"
     class="transition-all hover:brightness-75 dark:hover:brightness-125 default-container p-0 w-9 aspect-square grid place-content-center rounded-full text-sm"
   >
-    <i class="fa-moon fa-solid"></i>
+    <i
+      class="fa-solid"
+      [class.fa-sun]="!darkMode"
+      [class.fa-moon]="darkMode"
+    ></i>
   </button>
 </header>
