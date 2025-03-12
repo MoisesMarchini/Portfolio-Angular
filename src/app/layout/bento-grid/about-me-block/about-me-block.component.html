@@ -1,0 +1,29 @@
+<div class="h-full p-6">
+  <div
+    [class]="
+      'portrait-wrapper rounded-full w-12 h-12 mb-3 dark:bg-white bg-zinc-600'
+    "
+  >
+    <img src="" alt="" srcset="" />
+  </div>
+  <p class="text-2xl mb-3 font-semibold">Olá, meu nome é Moisés Marchini</p>
+  <div class="text-sm flex-grow grid gap-2 place-content-start">
+    <p>
+      Sou um desenvolvedor fullstack desde 2022 com experiência em Angular,
+      Bootstrap, TailwindCSS e .NET.
+    </p>
+    <p class="text-zinc-500">
+      Sou apaixonado por café, adoro passar o tempo jogando xadrez, assistindo
+      séries e assumindo o papel de barman para os amigos.
+    </p>
+  </div>
+  <app-default-button
+    customClasses="bg-transparent font-semibold p-0 hover:bg-transparent border-0 hover:underline mt-8 text-green-400"
+    routerLink="/contact"
+  >
+    <span>
+      Entrar em contato
+      <i class="ms-2 text-xs fa-solid fa-arrow-right"></i>
+    </span>
+  </app-default-button>
+</div>

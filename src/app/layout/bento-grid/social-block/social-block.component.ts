@@ -48,9 +48,9 @@ export class SocialBlockComponent extends BlockComponent {
     }
   }
 
-  override extendedClassNames = `bento-grid-block p-0 text-5xl col-span-1 md:col-span-1 text-white`; //bg-${this.color}-700 border-${this.color}-500 hover:bg-${this.color}-500`;
+  override extendedClassNames = `bento-grid-block p-0 text-5xl col-span-1 md:col-span-1 text-white`;
 
   ngOnInit() {
-    this.extendedClassNames = `bento-grid-block p-0 text-5xl col-span-1 md:col-span-1 text-white bg-${this.color}-700 border-${this.color}-500 hover:bg-${this.color}-500`;
+    this.extendedClassNames = `bento-grid-block p-0 text-5xl col-span-1 md:col-span-1 text-white dark:bg-${this.color}-700 dark:border-${this.color}-500 bg-${this.color}-600 border-${this.color}-500 hover:bg-${this.color}-500`;
   }
 }

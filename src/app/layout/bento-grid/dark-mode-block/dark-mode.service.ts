@@ -6,10 +6,27 @@ import { environment } from 'src/app/environments/environment';
   providedIn: 'root',
 })
 export class DarkModeService {
-  darkModeSubject = new BehaviorSubject(environment.darkMode);
+  private darkModeSubject = new BehaviorSubject(false);
   darkMode$ = this.darkModeSubject.asObservable();
 
   constructor() {
-    this.darkMode$.subscribe((darkMode) => (environment.darkMode = darkMode));
+    this.setDarkMode(environment.darkMode);
+  }
+
+  setDarkMode(value?: boolean) {
+    this.updateSubject(value);
+    environment.darkMode = !!value;
+  }
+
+  private updateSubject(darkMode?: boolean) {
+    this.darkModeSubject.next(!!darkMode);
+    this.ToggleBodyClass('dark', this.darkModeSubject.value == true);
+  }
+
+  ToggleBodyClass(cssClass: string, value: boolean) {
+    document.body.classList.toggle(
+      cssClass,
+      value
+    )
   }
 }

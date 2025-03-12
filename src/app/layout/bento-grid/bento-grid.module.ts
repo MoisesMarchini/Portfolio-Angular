@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { SocialBlockComponent } from './social-block/social-block.component';
 import { LanguagesBlockComponent } from './languages-block/languages.component';
 import { ProjectBlockComponent } from './project-block/project.component';
+import { AboutMeBlockComponent } from './about-me-block/about-me-block.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ProjectBlockComponent } from './project-block/project.component';
     DarkModeBlockComponent,
     LanguagesBlockComponent,
     SocialBlockComponent,
+    AboutMeBlockComponent,
   ],
   imports: [CommonModule, ComponentsModule, FormsModule],
   exports: [
@@ -26,6 +28,7 @@ import { ProjectBlockComponent } from './project-block/project.component';
     DarkModeBlockComponent,
     LanguagesBlockComponent,
     SocialBlockComponent,
+    AboutMeBlockComponent
   ],
 })
 export class BentoGridModule {}

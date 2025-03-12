@@ -8,9 +8,7 @@ import { twMerge } from 'tailwind-merge';
 })
 export class BlockComponent {
   get blockColor() {
-    return environment.darkMode
-      ? 'bg-zinc-800 border-zinc-700 text-white '
-      : 'bg-white border-0 text-zinc-900 ';
+    return 'dark:bg-zinc-800 dark:border-zinc-700 dark:text-white dark:border bg-white border-0 text-zinc-900';
   }
 
   defaultClassNames =

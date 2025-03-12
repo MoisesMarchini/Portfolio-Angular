@@ -8,16 +8,17 @@ import { DarkModeService } from './dark-mode.service';
   styleUrls: ['./dark-mode.component.scss'],
 })
 export class DarkModeBlockComponent extends BlockComponent {
-  darkMode = this.darkModeService.darkModeSubject.value;
+  darkMode = false;
 
   constructor(
     private darkModeService: DarkModeService,
     elementRef: ElementRef
   ) {
     super(elementRef);
+    darkModeService.darkMode$.subscribe(_darkMode => this.darkMode = _darkMode)
   }
 
   onChange() {
-    this.darkModeService.darkModeSubject.next(this.darkMode);
+    this.darkModeService.setDarkMode(this.darkMode);
   }
 }
