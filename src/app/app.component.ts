@@ -1,6 +1,6 @@
 import { Component, AfterViewInit } from '@angular/core';
-import { DarkModeService } from './layout/bento-grid/dark-mode-block/dark-mode.service';
 import { environment } from './environments/environment';
+import { DarkModeService } from './shared/services/darkmode.service';
 
 @Component({
   selector: 'app-root',

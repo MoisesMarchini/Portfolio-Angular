@@ -1,18 +1,20 @@
 <div
-  [class]="
-    'app-wrapper relative min-h-screen p-4 ' +
-    (darkMode ? 'bg-zinc-900 text-white' : 'bg-gray-200 text-zinc-900')
-  "
+  [class]="'app-wrapper relative min-h-screen'"
   [style]="'--_radial-bg-color: ' + getRadialBgColor()"
 >
   <app-cursor></app-cursor>
   <main
-    class="container relative lg:max-w-[1024px] mx-auto grid z-10"
+    class="container relative lg:max-w-[1124px] mx-auto z-10 bg-white ring-1 dark:bg-zinc-900 ring-zinc-100 dark:ring-zinc-300/20 !bg-opacity-100"
     *ngIf="!loading"
   >
-    <app-logo color="currentColor" class="mx-auto my-3 w-10 block"></app-logo>
-    <app-navbar class="mb-3"></app-navbar>
-    <router-outlet></router-outlet>
-    <app-footer class="mt-3"></app-footer>
+    <div
+      class="mx-auto w-full max-w-[90%] lg:max-w-[85%] min-h-screen flex flex-col py-4"
+    >
+      <app-navbar class="mb-3"></app-navbar>
+      <div class="content flex-1">
+        <router-outlet></router-outlet>
+      </div>
+      <app-footer class="mt-3"></app-footer>
+    </div>
   </main>
 </div>

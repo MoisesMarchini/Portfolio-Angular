@@ -4,7 +4,6 @@ import { ComponentsModule } from '../shared/components/components.module';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { BentoGridModule } from '../layout/bento-grid/bento-grid.module';
 import { ProjectsPageComponent } from './projects/projects.component';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
 
@@ -14,7 +13,6 @@ import { ProjectDetailsComponent } from './project-details/project-details.compo
     ComponentsModule,
     FormsModule,
     RouterModule,
-    BentoGridModule,
   ],
   declarations: [HomeComponent, ProjectsPageComponent, ProjectDetailsComponent],
 })

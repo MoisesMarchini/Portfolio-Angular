@@ -7,6 +7,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { LogoComponent } from './logo/logo.component';
 import { CursorComponent } from './cursor/cursor.component';
+import { DefaultContainerComponent } from './default-container/default-container.component';
+import { SectionHeaderComponent } from './section-header/section-header.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,8 @@ import { CursorComponent } from './cursor/cursor.component';
     FooterComponent,
     LogoComponent,
     CursorComponent,
+    DefaultContainerComponent,
+    SectionHeaderComponent,
   ],
   exports: [
     DefaultButtonComponent,
@@ -22,6 +26,8 @@ import { CursorComponent } from './cursor/cursor.component';
     FooterComponent,
     LogoComponent,
     CursorComponent,
+    DefaultContainerComponent,
+    SectionHeaderComponent,
   ],
   imports: [CommonModule, DirectivesModule, RouterModule],
 })

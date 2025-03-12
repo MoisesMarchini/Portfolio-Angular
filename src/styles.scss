@@ -6,3 +6,7 @@
 @import "./app/shared/styles/reboot.scss";
 @import "./app/shared/styles/bento-grid.scss";
 @import "./app/shared/styles/scrollbar.scss";
+
+body {
+  @apply dark:bg-zinc-950 dark:text-white bg-gray-200 text-zinc-900;
+}

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { environment } from 'src/app/environments/environment';
+import { DarkModeService } from '../../services/darkmode.service';
 
 @Component({
   selector: 'app-navbar',
@@ -8,6 +9,14 @@ import { environment } from 'src/app/environments/environment';
 })
 export class NavbarComponent {
   navLinks: { path: string; title: string }[] = [];
+
+  constructor(public darkModeService: DarkModeService) {
+  }
+
+  ngOnInit() {
+    this.navLinks = this.getNavLinks();
+  }
+
   getNavLinks() {
     const routePaths = environment.routePaths;
     const routeTitles = environment.routeTitles;
@@ -20,9 +29,5 @@ export class NavbarComponent {
     });
 
     return mapedLinks;
-  }
-
-  ngOnInit() {
-    this.navLinks = this.getNavLinks();
   }
 }

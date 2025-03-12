@@ -14,6 +14,10 @@ export class DarkModeService {
   }
 
   setDarkMode(value?: boolean) {
+    const currentValue = this.darkModeSubject.value;
+    if (value == undefined) {
+      value = !currentValue;
+    }
     this.updateSubject(value);
     environment.darkMode = !!value;
   }

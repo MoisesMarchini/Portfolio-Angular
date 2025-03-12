@@ -1,21 +1,13 @@
 .nav-link {
-  opacity: 0.25;
-  &::before {
-    content: "";
-    position: absolute;
-    width: 0px;
-    height: 1px;
-    bottom: -6px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: currentColor;
-    transition: inherit;
+  opacity: 0.75;
+  span {
+    opacity: 0;
+  }
+  &.active span {
+    opacity: 100;
   }
 }
 .nav-link.active,
 .nav-link:hover {
   opacity: 1;
-  &::before {
-    width: 125%;
-  }
 }

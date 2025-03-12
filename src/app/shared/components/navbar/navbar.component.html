@@ -1,11 +1,28 @@
-<ul class="flex gap-8 justify-center py-3">
-  <li *ngFor="let navLink of navLinks">
-    <a
-      class="nav-link relative transition-all font-semibold"
-      [routerLinkActive]="'active'"
-      [routerLink]="navLink.path"
-    >
-      {{ navLink.title }}
-    </a>
-  </li>
-</ul>
+<header class="flex items-center w-full gap-4">
+  <app-logo color="currentColor" class="w-8 lg:w-10 block me-auto"></app-logo>
+  <nav
+    default-container
+    class="p-0 rounded-full text-sm font-medium px-2 hidden md:block"
+  >
+    <ul class="flex justify-center">
+      <li *ngFor="let navLink of navLinks; let first = first; let last = last">
+        <a
+          class="nav-link relative transition-all text-sm font-medium px-4 py-2 block rounded-full"
+          [routerLinkActive]="'active text-teal-600 dark:text-teal-400'"
+          [routerLink]="navLink.path"
+        >
+          {{ navLink.title }}
+          <span
+            class="absolute transition-all inset-x-1 -bottom-px h-px bg-gradient-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0 dark:from-teal-400/0 dark:via-teal-400/40 dark:to-teal-400/0"
+          ></span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <button
+    (click)="darkModeService.setDarkMode()"
+    class="transition-all hover:brightness-75 dark:hover:brightness-125 default-container p-0 w-9 aspect-square grid place-content-center rounded-full text-sm"
+  >
+    <i class="fa-moon fa-solid"></i>
+  </button>
+</header>
