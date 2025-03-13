@@ -6,7 +6,7 @@ import { twMerge } from 'tailwind-merge';
   template: '<ng-content></ng-content>',
 })
 export class DefaultContainerComponent {
-  private defaultClasses = 'p-4 ring-1 shadow-lg text-zinc-800 bg-white/90 shadow-zinc-800/5 ring-zinc-900/5 backdrop-blur-sm dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 rounded';
+  private defaultClasses = 'p-4 shadow-lg text-zinc-800 bg-white/90 shadow-zinc-800/5 ring-default backdrop-blur-sm dark:bg-zinc-800/90 dark:text-zinc-200 rounded';
   private hostClasses = '';
   private lastClasses = '';
 

@@ -1,16 +1,31 @@
-<h2 class="font-medium mb-8 flex gap-6 items-center" *ngIf="groupName">
-  <span
-    class="default-container !text-white w-12 grid place-content-center text-xl p-0 aspect-square rounded-full bg-teal-400 dark:bg-teal-600"
-    ><i class="fas fa-{{ groupIcon }}"></i
-  ></span>
-  <span class="text-2xl sm:text-3xl"> {{ groupName }} </span>
-  <ng-content select="[inside-group-name]"></ng-content>
-</h2>
-<ng-content select="[after-group-name]"></ng-content>
-<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-  <project-card
-    *ngFor="let project of projects"
-    [model]="project"
-  ></project-card>
+<div class="flex flex-col border-default border-b">
+  <h2
+    (click)="toggleExpand()"
+    [class.cursor-pointer]="canExpand"
+    class="font-medium py-4 px-4 flex items-center justify-between"
+    *ngIf="groupName"
+  >
+    <span class="text-2xl sm:text-3xl"> {{ groupName }} </span>
+    <span
+      *ngIf="canExpand"
+      class="grid place-content-center text-xl aspect-square rounded-full"
+      ><i class="fas fa-chevron-down transition" [class.rotate-180]="expand"></i
+    ></span>
+    <ng-content select="[inside-group-name]"></ng-content>
+  </h2>
+  <ng-content select="[after-group-name]"></ng-content>
+  <div
+    class="overflow-hidden transition-all duration-700 max-h-max"
+    [class.h-0]="!expand"
+  >
+    <div
+      class="grid gap-x-4 gap-y-8 p-px pb-8 pt-4 md:grid-cols-2 lg:grid-cols-3"
+    >
+      <project-card
+        *ngFor="let project of projects"
+        [model]="project"
+      ></project-card>
+    </div>
+  </div>
+  <ng-content select="[after-group-projects]"></ng-content>
 </div>
-<ng-content select="[after-group-projects]"></ng-content>

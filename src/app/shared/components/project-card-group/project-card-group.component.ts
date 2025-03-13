@@ -10,4 +10,12 @@ export class ProjectCardGroupComponent {
   @Input() projects: ProjectModel[] = [];
   @Input() groupName?: string;
   @Input() groupIcon?: string;
+  @Input() canExpand: boolean = true;
+  expand: boolean = true;
+
+  toggleExpand() {
+    if (!this.canExpand) return;
+
+    this.expand = !this.expand;
+  }
 }
